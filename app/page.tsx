@@ -100,20 +100,20 @@ export default function Home({
         </div>
       </div>
 
-      {/* Sticky LINE Button */}
-      <div className="fixed bottom-0 left-0 w-full z-50 p-4 pb-6 flex justify-center pointer-events-none">
+      {/* Sticky LINE Button / CTR */}
+      <div className="fixed bottom-0 left-0 w-full z-50 pointer-events-none pb-4 px-4 flex justify-center">
         <div className="w-full max-w-2xl flex justify-center md:justify-end">
           <a
             href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
             target="_blank"
             rel="noopener noreferrer"
-            className="pointer-events-auto transition-transform hover:scale-105 active:scale-95 flex items-center justify-center filter drop-shadow-xl animate-bounce"
+            className="pointer-events-auto transition-transform hover:scale-105 active:scale-95 flex items-center justify-center filter drop-shadow-2xl animate-bounce"
             style={{ animationDuration: "2s" }}
           >
             <img
               src="/pic/icon/1_2x.avif"
               alt="LINEで無料相談"
-              className="w-72 h-auto md:w-80 object-contain"
+              className="w-80 md:w-96 h-auto object-contain"
             />
           </a>
         </div>

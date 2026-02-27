@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  fontFamily: {
-    sans: ["var(--font-noto-sans-jp)", "sans-serif"],
-    outfit: ["var(--font-outfit)", "sans-serif"],
-  },
+  --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
 }
 
 /*
@@ -16,6 +14,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
