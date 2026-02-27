@@ -2,7 +2,6 @@ import Image from "next/image";
 import { images } from "@/lib/images";
 import Link from "next/link";
 import BentoSection from "@/app/components/BentoSection";
-import AnxietyListSection from "@/app/components/AnxietyListSection";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
 
@@ -48,6 +47,7 @@ export default function Home({
           </>
         )}
 
+        {/* 1枚目: Hero */}
         {heroImg && (
           <img
             src={`/pic/hero_view/${heroImg}`}
@@ -58,8 +58,16 @@ export default function Home({
 
         <CtaButton />
 
-        <AnxietyListSection />
+        {/* 2枚目: 共感・お悩み */}
+        {kyokanImg && (
+          <img
+            src={`/pic/kyokan/${kyokanImg}`}
+            alt="共感"
+            className="w-full h-auto block"
+          />
+        )}
 
+        {/* 3枚目: 料金 */}
         {layout !== "price" && priceImg && (
           <>
             <img
@@ -73,15 +81,7 @@ export default function Home({
 
         {layout === "price" && <div className="h-8 md:h-12 w-full"></div>}
 
-        <BentoSection />
-
-        {kyokanImg && (
-          <img
-            src={`/pic/kyokan/${kyokanImg}`}
-            alt="共感"
-            className="w-full h-auto block"
-          />
-        )}
+        {/* 安心 */}
         {ansinImg && (
           <img
             src={`/pic/ansin/${ansinImg}`}
@@ -89,6 +89,8 @@ export default function Home({
             className="w-full h-auto block"
           />
         )}
+
+        {/* 選ばれる理由 */}
         {erabareruriyuuImg && (
           <img
             src={`/pic/erabareruriyuu/${erabareruriyuuImg}`}
@@ -96,6 +98,11 @@ export default function Home({
             className="w-full h-auto block"
           />
         )}
+
+        {/* 利用者の声 (HTML) */}
+        <BentoSection />
+
+        <CtaButton />
 
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
           <h2 className="text-xl font-bold mb-4 text-center">運営者情報</h2>
