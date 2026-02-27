@@ -4,12 +4,12 @@ import { MessageCircle, ChevronRight } from "lucide-react";
 
 export default function CtaButton() {
     return (
-        <div className="w-full flex justify-center relative z-20 -my-8 md:-my-12 px-4 pointer-events-none">
+        <div className="w-full flex justify-center bg-gray-50 py-6 md:py-8 border-y-2 border-gray-100 px-4">
             <a
                 href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pointer-events-auto group flex flex-col items-center justify-center w-full max-w-md cursor-pointer relative z-10 scale-[0.95] md:scale-100"
+                className="group flex flex-col items-center justify-center w-full max-w-md cursor-pointer relative z-10 scale-[0.95] md:scale-100"
             >
                 {/* チョコザップ風 上部バッジ（黄色＋赤文字など目立つ色） */}
                 <div className="relative -mb-1 w-full px-2 z-20">
