@@ -1,24 +1,42 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
 import Link from "next/link";
-import BentoSection from "@/app/components/BentoSection";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
+
+// LPの表示順序（ここを入れ替えるだけでLP構成が変わる）
+export type SectionType = "hero_view" | "kyokan" | "price" | "ansin" | "erabareruriyuu" | "cta";
+
+const defaultLayout: SectionType[] = [
+  "hero_view",
+  "cta",
+  "kyokan",
+  "price",
+  "cta",
+  "ansin",
+  "erabareruriyuu",
+  "cta"
+];
+
+const priceFirstLayout: SectionType[] = [
+  "price",
+  "cta",
+  "hero_view",
+  "cta",
+  "kyokan",
+  "ansin",
+  "erabareruriyuu",
+  "cta"
+];
 
 export default function Home({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  // Read parameters or use default 0
-  const heroIndex = parseInt((searchParams.hero as string) || "0", 10);
-  const kyokanIndex = parseInt((searchParams.kyokan as string) || "0", 10);
-  const ansinIndex = parseInt((searchParams.ansin as string) || "0", 10);
-  const erabareruriyuuIndex = parseInt((searchParams.erabareruriyuu as string) || "0", 10);
-  const priceIndex = parseInt((searchParams.price as string) || "0", 10);
-
   // A/B test layout variants
-  const layout = (searchParams.layout as string) || "default";
+  const layoutParam = (searchParams.layout as string) || "default";
+  const layoutConfig = layoutParam === "price" ? priceFirstLayout : defaultLayout;
 
   // Safe checks against out of bound indices
   const getSafeImage = (category: keyof typeof images, index: number) => {
@@ -27,83 +45,41 @@ export default function Home({
     return list[index % list.length];
   };
 
-  const heroImg = getSafeImage("hero_view", heroIndex);
-  const kyokanImg = getSafeImage("kyokan", kyokanIndex);
-  const ansinImg = getSafeImage("ansin", ansinIndex);
-  const erabareruriyuuImg = getSafeImage("erabareruriyuu", erabareruriyuuIndex);
-  const priceImg = getSafeImage("price", priceIndex);
+  // URLから各カテゴリのインデックスを取得
+  const indices = {
+    hero_view: parseInt((searchParams.hero as string) || "0", 10),
+    kyokan: parseInt((searchParams.kyokan as string) || "0", 10),
+    ansin: parseInt((searchParams.ansin as string) || "0", 10),
+    erabareruriyuu: parseInt((searchParams.erabareruriyuu as string) || "0", 10),
+    price: parseInt((searchParams.price as string) || "0", 10),
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24 font-sans bg-pink-50">
       <div className="w-full max-w-2xl mx-auto shadow-2xl bg-white flex flex-col items-stretch relative">
-        {layout === "price" && priceImg && (
-          <>
+
+        {/* 動的配列による画像とボタンのレンダー */}
+        {layoutConfig.map((section, idx) => {
+          if (section === "cta") {
+            return <CtaButton key={`cta-${idx}`} />;
+          }
+
+          // 画像セクションの場合
+          const imageFileName = getSafeImage(section, indices[section]);
+          if (!imageFileName) return null;
+
+          return (
             <img
-              src={`/pic/price/${priceImg}`}
-              alt="料金(A/Bテスト配置)"
+              key={`${section}-${idx}`}
+              src={`/pic/${section}/${imageFileName}`}
+              alt={section}
               className="w-full h-auto block"
+              style={{ display: "block" }} // 意図せぬ余白を防ぐ
             />
-            <CtaButton />
-          </>
-        )}
+          );
+        })}
 
-        {/* 1枚目: Hero */}
-        {heroImg && (
-          <img
-            src={`/pic/hero_view/${heroImg}`}
-            alt="Hero View"
-            className="w-full h-auto block"
-          />
-        )}
-
-        <CtaButton />
-
-        {/* 2枚目: 共感・お悩み */}
-        {kyokanImg && (
-          <img
-            src={`/pic/kyokan/${kyokanImg}`}
-            alt="共感"
-            className="w-full h-auto block"
-          />
-        )}
-
-        {/* 3枚目: 料金 */}
-        {layout !== "price" && priceImg && (
-          <>
-            <img
-              src={`/pic/price/${priceImg}`}
-              alt="料金"
-              className="w-full h-auto block"
-            />
-            <CtaButton />
-          </>
-        )}
-
-        {layout === "price" && <div className="h-8 md:h-12 w-full"></div>}
-
-        {/* 安心 */}
-        {ansinImg && (
-          <img
-            src={`/pic/ansin/${ansinImg}`}
-            alt="安心"
-            className="w-full h-auto block"
-          />
-        )}
-
-        {/* 選ばれる理由 */}
-        {erabareruriyuuImg && (
-          <img
-            src={`/pic/erabareruriyuu/${erabareruriyuuImg}`}
-            alt="選ばれる理由"
-            className="w-full h-auto block"
-          />
-        )}
-
-        {/* 利用者の声 (HTML) */}
-        <BentoSection />
-
-        <CtaButton />
-
+        {/* 運営者情報（フッター） */}
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
           <h2 className="text-xl font-bold mb-4 text-center">運営者情報</h2>
           <table className="w-full border-collapse mb-8 text-left">
