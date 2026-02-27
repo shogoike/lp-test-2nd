@@ -35,36 +35,7 @@ export default function BentoSection() {
                 </div>
 
 
-                <div className="col-span-2 md:col-span-6 bg-[#FFEDD5] text-[#9A3412] rounded-3xl p-8 shadow-sm flex flex-col justify-center items-center text-center">
-                    <p className="text-sm font-bold tracking-widest mb-3 opacity-90">PRICE</p>
-                    <div className="font-outfit font-black text-6xl md:text-7xl tracking-tighter mb-2">
-                        <span className="text-3xl font-sans inline-block align-top mt-2 -mr-1">¥</span>
-                        19,800<span className="text-3xl font-sans inline-block align-baseline ml-1">〜</span>
-                    </div>
-                    <p className="font-bold text-base bg-white/60 px-4 py-2 rounded-full mt-3 text-[#9A3412]">追加費用は一切なし</p>
-                </div>
 
-                {/* 4. お手軽感 (右側下段) */}
-                <div className="col-span-1 md:col-span-3 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm flex items-center gap-4">
-                    <div className="bg-rose-50 p-4 rounded-2xl flex-shrink-0">
-                        <Smartphone className="w-8 h-8 text-rose-500" />
-                    </div>
-                    <div>
-                        <h3 className="text-base font-bold text-gray-800 mb-1">スマホで完結</h3>
-                        <p className="text-xs text-gray-500 leading-snug">LINEで相談から退職完了まで。<br />出社の必要はありません。</p>
-                    </div>
-                </div>
-
-                {/* 5. 安心感 (下部左側) */}
-                <div className="col-span-1 md:col-span-3 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm flex items-center gap-4">
-                    <div className="bg-rose-50 p-4 rounded-2xl flex-shrink-0">
-                        <MessageCircle className="w-8 h-8 text-rose-500" />
-                    </div>
-                    <div>
-                        <h3 className="text-base font-bold text-gray-800 mb-1">会社との連絡不要</h3>
-                        <p className="text-xs text-gray-500 leading-snug">煩わしいやり取りは<br />すべて私たちが代行します。</p>
-                    </div>
-                </div>
 
                 {/* 6. 利用者の声 (最下部フル幅) */}
                 <div className="col-span-2 md:col-span-6 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
