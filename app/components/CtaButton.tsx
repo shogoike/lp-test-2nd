@@ -4,39 +4,35 @@ import { MessageCircle, ChevronRight } from "lucide-react";
 
 export default function CtaButton() {
     return (
-        <div className="w-full flex justify-center my-10 md:my-12 px-4">
+        <div className="w-full flex justify-center relative z-20 -my-8 md:-my-12 px-4 pointer-events-none">
             <a
                 href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center w-full max-w-md cursor-pointer"
+                className="pointer-events-auto group flex flex-col items-center justify-center w-full max-w-md cursor-pointer relative z-10 scale-[0.95] md:scale-100"
             >
-                {/* 上部バッジ（ピンク） */}
-                <div className="relative mb-3">
-                    <div className="bg-rose-50/90 backdrop-blur-sm border border-rose-200 text-rose-600 text-xs md:text-sm font-bold px-6 py-2 rounded-full shadow-sm flex items-center gap-1">
-                        <span className="text-rose-400">\</span>
-                        相談無料・24時間受付中
-                        <span className="text-rose-400">/</span>
+                {/* チョコザップ風 上部バッジ（黄色＋赤文字など目立つ色） */}
+                <div className="relative -mb-1 w-full px-2 z-20">
+                    <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[13px] md:text-base font-black px-4 py-2 rounded-t-xl shadow-md flex items-center justify-center gap-1 animate-bounce" style={{ animationDuration: "2s" }}>
+                        ＼ スマホで最短1分！ ／ 相談無料・24時間受付中
                     </div>
-                    {/* 下三角（吹き出しのしっぽ風） */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-transparent border-t-rose-200"></div>
                 </div>
 
                 {/* メインボタン（LINEグリーン） */}
-                <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-2xl shadow-lg hover:shadow-xl p-1">
-                    <div className="bg-gradient-to-b from-white/20 to-transparent w-full h-full rounded-xl flex flex-col items-center justify-center py-4 px-2 relative overflow-hidden">
+                <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-b-xl rounded-t-sm shadow-[0_8px_0_#048b3b] hover:shadow-[0_4px_0_#048b3b] hover:translate-y-1 p-1">
+                    <div className="bg-gradient-to-b from-white/30 to-transparent w-full h-full rounded-lg flex flex-col items-center justify-center py-4 px-2 relative overflow-hidden">
                         {/* キラッと光るエフェクト */}
-                        <div className="absolute inset-0 w-12 h-full bg-white/20 skew-x-[-20deg] group-hover:animate-[shine_1.5s_ease-in-out_infinite] -translate-x-32" />
+                        <div className="absolute inset-0 w-[200%] h-full bg-white/30 skew-x-[-20deg] animate-[shine_2s_ease-in-out_infinite] -translate-x-full" />
 
-                        <div className="flex items-center gap-2 mb-1 z-10">
-                            <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-8 h-8 md:w-10 md:h-10 rounded-lg object-contain shadow-sm" />
-                            <span className="text-white text-xl md:text-2xl font-extrabold tracking-wide">
-                                今すぐLINEで無料相談
+                        <div className="flex items-center gap-3 mb-1 z-10">
+                            <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-10 h-10 md:w-12 md:h-12 rounded-lg object-contain shadow-sm border-2 border-white" />
+                            <span className="text-white text-2xl md:text-3xl font-black tracking-widest drop-shadow-md">
+                                今すぐLINE相談
                             </span>
-                            <ChevronRight className="w-6 h-6 text-white opacity-80" />
+                            <ChevronRight className="w-8 h-8 text-white font-black" />
                         </div>
-                        <p className="text-green-50 text-xs md:text-sm font-bold opacity-90 z-10">
-                            匿名OK / スマホから最短1分で完了
+                        <p className="text-yellow-200 text-sm md:text-base font-bold opacity-100 z-10 mt-1 drop-shadow-sm">
+                            匿名OK！出社の必要はありません！
                         </p>
                     </div>
                 </div>
