@@ -4,7 +4,7 @@ import { MessageCircle, ChevronRight } from "lucide-react";
 
 export default function CtaButton() {
     return (
-        <div className="w-full flex justify-center bg-gray-50 py-6 md:py-8 border-y-2 border-gray-100 px-4">
+        <div className="w-full flex justify-center bg-white py-6 md:py-8 px-4">
             <a
                 href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
                 target="_blank"
