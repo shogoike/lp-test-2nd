@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
 import Link from "next/link";
+import BentoSection from "@/app/components/BentoSection";
 
 export default function Home({
   searchParams,
@@ -37,6 +38,9 @@ export default function Home({
             className="w-full h-auto block"
           />
         )}
+
+        <BentoSection />
+
         {kyokanImg && (
           <img
             src={`/pic/kyokan/${kyokanImg}`}
