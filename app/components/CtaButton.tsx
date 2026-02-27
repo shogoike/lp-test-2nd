@@ -29,7 +29,7 @@ export default function CtaButton() {
                         <div className="absolute inset-0 w-12 h-full bg-white/20 skew-x-[-20deg] group-hover:animate-[shine_1.5s_ease-in-out_infinite] -translate-x-32" />
 
                         <div className="flex items-center gap-2 mb-1 z-10">
-                            <MessageCircle className="w-7 h-7 md:w-8 md:h-8 text-white fill-white" />
+                            <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-8 h-8 md:w-10 md:h-10 rounded-lg object-contain shadow-sm" />
                             <span className="text-white text-xl md:text-2xl font-extrabold tracking-wide">
                                 今すぐLINEで無料相談
                             </span>

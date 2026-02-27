@@ -2,7 +2,6 @@ import Image from "next/image";
 import { images } from "@/lib/images";
 import Link from "next/link";
 import BentoSection from "@/app/components/BentoSection";
-import AnxietyRemovalSection from "@/app/components/AnxietyRemovalSection";
 import AnxietyListSection from "@/app/components/AnxietyListSection";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
@@ -47,11 +46,17 @@ export default function Home({
 
         <AnxietyListSection />
 
-        <BentoSection />
-
-        <AnxietyRemovalSection />
+        {priceImg && (
+          <img
+            src={`/pic/price/${priceImg}`}
+            alt="料金"
+            className="w-full h-auto block"
+          />
+        )}
 
         <CtaButton />
+
+        <BentoSection />
 
         {kyokanImg && (
           <img
@@ -74,15 +79,12 @@ export default function Home({
             className="w-full h-auto block"
           />
         )}
-        {priceImg && (
-          <>
-            <img
-              src={`/pic/price/${priceImg}`}
-              alt="料金"
-              className="w-full h-auto block"
-            />
-            <CtaButton />
-          </>
+        {erabareruriyuuImg && (
+          <img
+            src={`/pic/erabareruriyuu/${erabareruriyuuImg}`}
+            alt="選ばれる理由"
+            className="w-full h-auto block"
+          />
         )}
 
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">

@@ -31,7 +31,7 @@ export default function FloatingCtaButton() {
                             <div className="absolute inset-0 w-12 h-full bg-white/30 skew-x-[-20deg] group-hover:animate-[shine_1.5s_ease-in-out_infinite] -translate-x-32" />
 
                             <div className="flex items-center gap-2 mb-0.5 z-10">
-                                <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-white fill-white" />
+                                <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-7 h-7 md:w-9 md:h-9 rounded-[8px] object-contain shadow-sm" />
                                 <span className="text-white text-lg md:text-xl font-extrabold tracking-wide drop-shadow-sm">
                                     LINEで今すぐ相談
                                 </span>
