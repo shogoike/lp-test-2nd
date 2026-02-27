@@ -21,6 +21,7 @@ export default function Admin() {
         erabareruriyuu: 0,
         price: 0,
     });
+    const [layoutVariant, setLayoutVariant] = useState<"default" | "price">("default");
 
     const [generatedUrl, setGeneratedUrl] = useState("");
     const [baseUrl, setBaseUrl] = useState("");
@@ -51,9 +52,10 @@ export default function Admin() {
         if (images.ansin.length > 0) params.set("ansin", selections.ansin.toString());
         if (images.erabareruriyuu.length > 0) params.set("erabareruriyuu", selections.erabareruriyuu.toString());
         if (images.price.length > 0) params.set("price", selections.price.toString());
+        if (layoutVariant !== "default") params.set("layout", layoutVariant);
 
         setGeneratedUrl(`${baseUrl}/?${params.toString()}`);
-    }, [selections, baseUrl]);
+    }, [selections, baseUrl, layoutVariant]);
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(generatedUrl);
@@ -101,7 +103,25 @@ export default function Admin() {
                 </div>
 
                 <div className="bg-white p-6 shadow-lg rounded-lg mb-8 sticky top-4 z-10 border border-blue-100">
-                    <h2 className="text-lg font-semibold mb-2 text-gray-700">生成されたURL (A/Bテスト用)</h2>
+                    <div className="flex justify-between items-center mb-4">
+                        <h2 className="text-lg font-semibold text-gray-700">生成されたURL (A/Bテスト用)</h2>
+
+                        {/* レイアウト切り替えトグル */}
+                        <div className="flex bg-gray-100 p-1 rounded-lg border border-gray-200">
+                            <button
+                                onClick={() => setLayoutVariant("default")}
+                                className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors ${layoutVariant === "default" ? "bg-white text-blue-600 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}
+                            >
+                                通常版
+                            </button>
+                            <button
+                                onClick={() => setLayoutVariant("price")}
+                                className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors ${layoutVariant === "price" ? "bg-white text-purple-600 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}
+                            >
+                                料金最上位版
+                            </button>
+                        </div>
+                    </div>
                     <div className="flex gap-2">
                         <input
                             type="text"

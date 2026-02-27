@@ -18,6 +18,9 @@ export default function Home({
   const erabareruriyuuIndex = parseInt((searchParams.erabareruriyuu as string) || "0", 10);
   const priceIndex = parseInt((searchParams.price as string) || "0", 10);
 
+  // A/B test layout variants
+  const layout = (searchParams.layout as string) || "default";
+
   // Safe checks against out of bound indices
   const getSafeImage = (category: keyof typeof images, index: number) => {
     const list = images[category];
@@ -34,6 +37,17 @@ export default function Home({
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24 font-sans bg-pink-50">
       <div className="w-full max-w-2xl mx-auto shadow-2xl bg-white flex flex-col items-stretch relative">
+        {layout === "price" && priceImg && (
+          <>
+            <img
+              src={`/pic/price/${priceImg}`}
+              alt="料金(A/Bテスト配置)"
+              className="w-full h-auto block"
+            />
+            <CtaButton />
+          </>
+        )}
+
         {heroImg && (
           <img
             src={`/pic/hero_view/${heroImg}`}
@@ -46,15 +60,18 @@ export default function Home({
 
         <AnxietyListSection />
 
-        {priceImg && (
-          <img
-            src={`/pic/price/${priceImg}`}
-            alt="料金"
-            className="w-full h-auto block"
-          />
+        {layout !== "price" && priceImg && (
+          <>
+            <img
+              src={`/pic/price/${priceImg}`}
+              alt="料金"
+              className="w-full h-auto block"
+            />
+            <CtaButton />
+          </>
         )}
 
-        <CtaButton />
+        {layout === "price" && <div className="h-8 md:h-12 w-full"></div>}
 
         <BentoSection />
 
@@ -69,13 +86,6 @@ export default function Home({
           <img
             src={`/pic/ansin/${ansinImg}`}
             alt="安心"
-            className="w-full h-auto block"
-          />
-        )}
-        {erabareruriyuuImg && (
-          <img
-            src={`/pic/erabareruriyuu/${erabareruriyuuImg}`}
-            alt="選ばれる理由"
             className="w-full h-auto block"
           />
         )}
