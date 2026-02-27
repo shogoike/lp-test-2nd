@@ -3,6 +3,7 @@ import { images } from "@/lib/images";
 import Link from "next/link";
 import BentoSection from "@/app/components/BentoSection";
 import AnxietyRemovalSection from "@/app/components/AnxietyRemovalSection";
+import AnxietyListSection from "@/app/components/AnxietyListSection";
 import CtaButton from "@/app/components/CtaButton";
 
 export default function Home({
@@ -42,6 +43,8 @@ export default function Home({
         )}
 
         <CtaButton />
+
+        <AnxietyListSection />
 
         <BentoSection />
 

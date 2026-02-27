@@ -34,31 +34,9 @@ export default function BentoSection() {
                     </div>
                 </div>
 
-                {/* 2. 不安提起 (左側、縦長) */}
-                <div className="col-span-2 md:col-span-3 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm flex flex-col hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-2 text-rose-500 mb-4">
-                        <AlertTriangle className="w-6 h-6" />
-                        <span className="font-bold tracking-widest text-xs">ANXIETY</span>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-3 leading-tight">
-                        上司や園長に「辞めたい」と<br />言えずに悩んでいませんか？
-                    </h3>
-                    <ul className="space-y-3 mt-auto">
-                        {[
-                            "人手不足で言い出しづらい",
-                            "引き止められて辞められない",
-                            "怒鳴られそうで怖い",
-                        ].map((text, i) => (
-                            <li key={i} className="flex gap-2 text-sm text-gray-600 items-start">
-                                <CheckCircle2 className="w-5 h-5 text-gray-300 shrink-0" />
-                                <span className="leading-tight">{text}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
 
-                {/* 3. 価格 (右側上段) */}
-                <div className="col-span-2 md:col-span-3 bg-[#FFEDD5] text-[#9A3412] rounded-3xl p-6 shadow-sm flex flex-col justify-center items-center text-center">
+                {/* 3. 価格 (フル幅) */}
+                <div className="col-span-2 md:col-span-6 bg-[#FFEDD5] text-[#9A3412] rounded-3xl p-6 shadow-sm flex flex-col justify-center items-center text-center">
                     <p className="text-xs font-bold tracking-widest mb-2 opacity-80">PRICE</p>
                     <div className="font-outfit font-black text-5xl md:text-6xl tracking-tighter mb-1">
                         <span className="text-2xl font-sans inline-block align-top mt-2 -mr-1">¥</span>
