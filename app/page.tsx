@@ -11,9 +11,11 @@ const defaultLayout: SectionType[] = [
   "hero_view",
   "cta",
   "kyokan",
+  "cta",
   "price",
   "cta",
   "ansin",
+  "cta",
   "erabareruriyuu",
   "cta"
 ];
@@ -24,7 +26,9 @@ const priceFirstLayout: SectionType[] = [
   "hero_view",
   "cta",
   "kyokan",
+  "cta",
   "ansin",
+  "cta",
   "erabareruriyuu",
   "cta"
 ];
