@@ -35,14 +35,13 @@ export default function BentoSection() {
                 </div>
 
 
-                {/* 3. 価格 (フル幅) */}
-                <div className="col-span-2 md:col-span-6 bg-[#FFEDD5] text-[#9A3412] rounded-3xl p-6 shadow-sm flex flex-col justify-center items-center text-center">
-                    <p className="text-xs font-bold tracking-widest mb-2 opacity-80">PRICE</p>
-                    <div className="font-outfit font-black text-5xl md:text-6xl tracking-tighter mb-1">
-                        <span className="text-2xl font-sans inline-block align-top mt-2 -mr-1">¥</span>
-                        19,800<span className="text-2xl font-sans inline-block align-baseline ml-1">〜</span>
+                <div className="col-span-2 md:col-span-6 bg-[#FFEDD5] text-[#9A3412] rounded-3xl p-8 shadow-sm flex flex-col justify-center items-center text-center">
+                    <p className="text-sm font-bold tracking-widest mb-3 opacity-90">PRICE</p>
+                    <div className="font-outfit font-black text-6xl md:text-7xl tracking-tighter mb-2">
+                        <span className="text-3xl font-sans inline-block align-top mt-2 -mr-1">¥</span>
+                        19,800<span className="text-3xl font-sans inline-block align-baseline ml-1">〜</span>
                     </div>
-                    <p className="font-bold text-sm bg-white/50 px-3 py-1 rounded-full mt-2">追加費用は一切なし</p>
+                    <p className="font-bold text-base bg-white/60 px-4 py-2 rounded-full mt-3 text-[#9A3412]">追加費用は一切なし</p>
                 </div>
 
                 {/* 4. お手軽感 (右側下段) */}
