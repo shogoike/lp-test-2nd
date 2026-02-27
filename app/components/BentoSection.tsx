@@ -16,7 +16,7 @@ export default function BentoSection() {
             <div className="grid grid-cols-2 md:grid-cols-6 gap-4 auto-rows-[minmax(120px,auto)]">
 
                 {/* 1. 権威授与 (上部フル幅) */}
-                <div className="col-span-2 md:col-span-6 bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl p-6 text-white shadow-lg relative overflow-hidden flex flex-col justify-center">
+                <div className="col-span-2 md:col-span-6 bg-gradient-to-br from-rose-600 to-pink-500 rounded-3xl p-6 text-white shadow-lg relative overflow-hidden flex flex-col justify-center">
                     <div className="absolute top-0 right-0 opacity-10 transform translate-x-4 -translate-y-4">
                         <ShieldCheck size={120} />
                     </div>
@@ -25,9 +25,9 @@ export default function BentoSection() {
                             <ShieldCheck className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                            <p className="text-blue-200 text-sm font-bold tracking-wider mb-1">AUTHORITY</p>
+                            <p className="text-pink-100 text-sm font-bold tracking-wider mb-1">AUTHORITY</p>
                             <h3 className="text-xl md:text-2xl font-black">弁護士監修で確実な退職</h3>
-                            <p className="text-sm mt-1 text-blue-50 opacity-90 leading-relaxed">
+                            <p className="text-sm mt-1 text-pink-50 opacity-95 leading-relaxed">
                                 法的に守られた適正なプロセスで手続きを進めるため、<br className="hidden md:block" />トラブルのリスクを極限まで減らします。
                             </p>
                         </div>
@@ -69,8 +69,8 @@ export default function BentoSection() {
 
                 {/* 4. お手軽感 (右側下段) */}
                 <div className="col-span-1 md:col-span-3 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm flex items-center gap-4">
-                    <div className="bg-emerald-50 p-4 rounded-2xl flex-shrink-0">
-                        <Smartphone className="w-8 h-8 text-emerald-600" />
+                    <div className="bg-rose-50 p-4 rounded-2xl flex-shrink-0">
+                        <Smartphone className="w-8 h-8 text-rose-500" />
                     </div>
                     <div>
                         <h3 className="text-base font-bold text-gray-800 mb-1">スマホで完結</h3>
@@ -80,8 +80,8 @@ export default function BentoSection() {
 
                 {/* 5. 安心感 (下部左側) */}
                 <div className="col-span-1 md:col-span-3 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm flex items-center gap-4">
-                    <div className="bg-blue-50 p-4 rounded-2xl flex-shrink-0">
-                        <MessageCircle className="w-8 h-8 text-blue-600" />
+                    <div className="bg-rose-50 p-4 rounded-2xl flex-shrink-0">
+                        <MessageCircle className="w-8 h-8 text-rose-500" />
                     </div>
                     <div>
                         <h3 className="text-base font-bold text-gray-800 mb-1">会社との連絡不要</h3>

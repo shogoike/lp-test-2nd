@@ -2,6 +2,8 @@ import Image from "next/image";
 import { images } from "@/lib/images";
 import Link from "next/link";
 import BentoSection from "@/app/components/BentoSection";
+import AnxietyRemovalSection from "@/app/components/AnxietyRemovalSection";
+import CtaButton from "@/app/components/CtaButton";
 
 export default function Home({
   searchParams,
@@ -29,7 +31,7 @@ export default function Home({
   const priceImg = getSafeImage("price", priceIndex);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start bg-gray-50 pb-24">
+    <main className="flex min-h-screen flex-col items-center justify-start pb-24 font-sans bg-pink-50">
       <div className="w-full max-w-2xl mx-auto shadow-2xl bg-white flex flex-col items-stretch relative">
         {heroImg && (
           <img
@@ -39,7 +41,13 @@ export default function Home({
           />
         )}
 
+        <CtaButton />
+
         <BentoSection />
+
+        <AnxietyRemovalSection />
+
+        <CtaButton />
 
         {kyokanImg && (
           <img
@@ -63,11 +71,14 @@ export default function Home({
           />
         )}
         {priceImg && (
-          <img
-            src={`/pic/price/${priceImg}`}
-            alt="料金"
-            className="w-full h-auto block"
-          />
+          <>
+            <img
+              src={`/pic/price/${priceImg}`}
+              alt="料金"
+              className="w-full h-auto block"
+            />
+            <CtaButton />
+          </>
         )}
 
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
