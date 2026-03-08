@@ -33,7 +33,7 @@ export default function CtaButton() {
                             <ChevronRight className="w-6 h-6 text-white font-black" />
                         </div>
                         <p className="text-yellow-200 text-xs md:text-sm font-bold opacity-100 z-10 mt-0.5 drop-shadow-sm">
-                            匿名OK！出社の必要はありません！
+                            匿名OK！園に行く必要はありません！
                         </p>
                     </div>
                 </div>
