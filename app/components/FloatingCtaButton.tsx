@@ -2,7 +2,7 @@
 
 import { MessageCircle, ChevronRight } from "lucide-react";
 
-export default function FloatingCtaButton() {
+export default function FloatingCtaButton({ text = "LINEで今すぐ相談" }: { text?: string }) {
     return (
         <div className="fixed bottom-0 left-0 w-full z-50 pointer-events-none flex justify-center pb-2">
             <div className="w-full md:max-w-md flex justify-center px-4">
@@ -30,7 +30,7 @@ export default function FloatingCtaButton() {
                             <div className="flex items-center gap-2 mb-0.5 z-10">
                                 <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-7 h-7 md:w-8 md:h-8 rounded-[6px] object-contain shadow-sm border border-white" />
                                 <span className="text-white text-lg md:text-xl font-black tracking-widest drop-shadow-md">
-                                    LINEで今すぐ相談
+                                    {text}
                                 </span>
                                 <ChevronRight className="w-5 h-5 text-white font-black" />
                             </div>

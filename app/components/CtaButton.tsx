@@ -2,7 +2,7 @@
 
 import { MessageCircle, ChevronRight } from "lucide-react";
 
-export default function CtaButton() {
+export default function CtaButton({ text = "今すぐLINE相談" }: { text?: string }) {
     return (
         <div className="w-full flex justify-center bg-white py-6 md:py-8 px-4">
             <a
@@ -28,7 +28,7 @@ export default function CtaButton() {
                         <div className="flex items-center gap-2 mb-1 z-10">
                             <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-8 h-8 md:w-10 md:h-10 rounded-lg object-contain shadow-sm border-2 border-white" />
                             <span className="text-white text-xl md:text-2xl font-black tracking-widest drop-shadow-md">
-                                今すぐLINE相談
+                                {text}
                             </span>
                             <ChevronRight className="w-6 h-6 text-white font-black" />
                         </div>

@@ -29,9 +29,11 @@ const priceFirstLayout: SectionType[] = [
 export default function LPPage({
   layoutType = "default",
   searchParams = {},
+  ctaText,
 }: {
   layoutType?: "default" | "price";
   searchParams?: { [key: string]: string | string[] | undefined };
+  ctaText?: string;
 }) {
   const layoutConfig = layoutType === "price" ? priceFirstLayout : defaultLayout;
 
@@ -61,7 +63,7 @@ export default function LPPage({
         {/* 動的配列による画像とボタンのレンダー */}
         {layoutConfig.map((section, idx) => {
           if (section === "cta") {
-            return <CtaButton key={`cta-${idx}`} />;
+            return <CtaButton key={`cta-${idx}`} text={ctaText} />;
           }
 
           // 画像セクションの場合
@@ -83,7 +85,7 @@ export default function LPPage({
         <QASection />
 
         {/* 最後のCTAボタン */}
-        <CtaButton />
+        <CtaButton text={ctaText} />
 
         {/* 運営者情報（フッター） */}
         <div className="w-full p-8 mt-12 bg-pink-50 text-gray-800 text-sm border-t border-pink-100">
@@ -117,7 +119,7 @@ export default function LPPage({
       </div>
 
       {/* Sticky LINE Button / CTR */}
-      <FloatingCtaButton />
+      <FloatingCtaButton text={ctaText} />
     </main>
   );
 }
