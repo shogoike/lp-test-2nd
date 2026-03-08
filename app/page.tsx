@@ -11,26 +11,20 @@ const defaultLayout: SectionType[] = [
   "hero_view",
   "cta",
   "kyokan",
-  "cta",
   "price",
-  "cta",
   "ansin",
   "cta",
-  "erabareruriyuu",
-  "cta"
+  "erabareruriyuu"
 ];
 
 const priceFirstLayout: SectionType[] = [
   "price",
-  "cta",
   "hero_view",
   "cta",
   "kyokan",
-  "cta",
   "ansin",
   "cta",
-  "erabareruriyuu",
-  "cta"
+  "erabareruriyuu"
 ];
 
 export default function Home({
