@@ -1,14 +1,6 @@
 export const images = {
   "hero_view": [
-    "S__14450706_0.jpg",
-    "S__14450708_0.jpg",
-    "S__14450709_0.jpg",
-    "S__14450710_0.jpg",
-    "S__14450711_0.jpg",
-    "S__14450712_0.jpg",
-    "S__14450713_0.jpg",
-    "S__14450714_0.jpg",
-    "S__14450715_0.jpg"
+    "gemi_edited.jpg"
   ],
   "ansin": [],
   "erabareruriyuu": [
