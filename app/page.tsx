@@ -81,6 +81,9 @@ export default function Home({
         {/* よくある質問 (Q&A) */}
         <QASection />
 
+        {/* 最後のCTAボタン */}
+        <CtaButton />
+
         {/* 運営者情報（フッター） */}
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
           <h2 className="text-xl font-bold mb-4 text-center">運営者情報</h2>
