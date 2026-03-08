@@ -100,11 +100,7 @@ export default function Home({
               </tr>
             </tbody>
           </table>
-          <div className="flex flex-col items-center gap-4 text-primary">
-            <Link href="/tokushoho" className="text-blue-600 hover:underline">特定商取引法に基づく表記</Link>
-            <Link href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</Link>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
+          <p className="text-center text-xs text-gray-400 mt-4">© 2025 by 8seAls All Rights Reserved.</p>
         </div>
       </div>
 
