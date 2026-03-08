@@ -3,6 +3,7 @@ import { images } from "@/lib/images";
 import Link from "next/link";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
+import QASection from "@/app/components/QASection";
 
 // LPの表示順序（ここを入れ替えるだけでLP構成が変わる）
 export type SectionType = "hero_view" | "kyokan" | "price" | "ansin" | "erabareruriyuu" | "cta";
@@ -77,6 +78,9 @@ export default function Home({
           );
         })}
 
+        {/* よくある質問 (Q&A) */}
+        <QASection />
+
         {/* 運営者情報（フッター） */}
         <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
           <h2 className="text-xl font-bold mb-4 text-center">運営者情報</h2>
@@ -100,7 +104,11 @@ export default function Home({
               </tr>
             </tbody>
           </table>
-          <p className="text-center text-xs text-gray-400 mt-4">© 2025 by 8seAls All Rights Reserved.</p>
+          <div className="flex flex-col items-center gap-4 text-primary">
+            <Link href="/tokushoho" className="text-blue-600 hover:underline">特定商取引法に基づく表記</Link>
+            <Link href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</Link>
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
         </div>
       </div>
 
