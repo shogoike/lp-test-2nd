@@ -13,8 +13,9 @@ export default function CtaButton() {
             >
                 {/* チョコザップ風 上部バッジ（黄色＋赤文字など目立つ色） */}
                 <div className="relative -mb-1 w-full px-2 z-20">
-                    <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[11px] md:text-sm font-black px-3 py-1.5 rounded-t-xl shadow-md flex items-center justify-center gap-1 animate-bounce" style={{ animationDuration: "2s" }}>
-                        ＼ スマホで最短1分！ ／ 相談無料・24時間受付中
+                    <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[12px] md:text-sm font-black px-2 py-1.5 rounded-t-xl shadow-md flex flex-col items-center justify-center animate-bounce leading-tight" style={{ animationDuration: "2s" }}>
+                        <span>＼ スマホで最短1分！ ／</span>
+                        <span>相談無料・24時間受付中</span>
                     </div>
                 </div>
 

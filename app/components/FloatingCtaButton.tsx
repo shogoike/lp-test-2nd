@@ -15,8 +15,9 @@ export default function FloatingCtaButton() {
                 >
                     {/* 上部バッジ（ピンクから黄色に変更して目立たせる） */}
                     <div className="relative -mb-1 w-full px-2 z-20">
-                        <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[11px] md:text-xs font-black px-4 py-1.5 rounded-t-2xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] flex items-center justify-center gap-1 mx-auto max-w-[260px]">
-                            ＼ スマホで最短1分！ ／ 相談無料・24時間受付中
+                        <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[12px] md:text-xs font-black px-2 py-1.5 rounded-t-2xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] flex flex-col items-center justify-center mx-auto max-w-[280px] leading-tight">
+                            <span>＼ スマホで最短1分！ ／</span>
+                            <span>相談無料・24時間受付中</span>
                         </div>
                     </div>
 
