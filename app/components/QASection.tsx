@@ -67,10 +67,10 @@ export default function QASection() {
   };
 
   return (
-    <div className="w-full bg-slate-50 py-12 px-4 md:px-8 mt-4 border-t border-slate-200">
+    <div className="w-full bg-pink-50/50 py-12 px-4 md:px-8 mt-4 border-t border-pink-100">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-black text-center mb-8 text-slate-800 flex items-center justify-center gap-2">
-          <span className="text-blue-600">Q&A</span> よくある質問
+        <h2 className="text-2xl md:text-3xl font-black text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
+          <span className="text-pink-500">Q&A</span> よくある質問
         </h2>
         
         <div className="flex flex-col gap-4">
@@ -79,31 +79,31 @@ export default function QASection() {
             return (
               <div 
                 key={idx} 
-                className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300"
+                className="bg-white rounded-xl shadow-sm border border-pink-100 overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => toggleOpen(idx)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between focus:outline-none hover:bg-slate-50 transition-colors"
+                  className="w-full text-left px-5 py-4 flex items-center justify-between focus:outline-none hover:bg-pink-50/30 transition-colors"
                 >
                   <div className="flex gap-3">
-                    <span className="font-bold text-blue-600 text-lg md:text-xl">Q.</span>
-                    <span className="font-bold text-slate-800 text-sm md:text-base">{qa.q}</span>
+                    <span className="font-bold text-pink-500 text-lg md:text-xl">Q.</span>
+                    <span className="font-bold text-gray-800 text-sm md:text-base">{qa.q}</span>
                   </div>
                   {isOpen ? (
-                    <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-pink-300 flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-pink-300 flex-shrink-0" />
                   )}
                 </button>
                 
                 <div 
-                  className={`px-5 overflow-hidden transition-all duration-300 ease-in-out bg-blue-50/50 ${
-                    isOpen ? "max-h-96 py-4 border-t border-slate-100" : "max-h-0 py-0"
+                  className={`px-5 overflow-hidden transition-all duration-300 ease-in-out bg-pink-50/50 ${
+                    isOpen ? "max-h-96 py-4 border-t border-pink-100" : "max-h-0 py-0"
                   }`}
                 >
                   <div className="flex gap-3">
-                    <span className="font-bold text-red-500 text-lg md:text-xl">A.</span>
-                    <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+                    <span className="font-bold text-red-400 text-lg md:text-xl">A.</span>
+                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                       {qa.a}
                     </p>
                   </div>

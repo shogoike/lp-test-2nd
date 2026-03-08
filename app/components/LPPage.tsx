@@ -18,7 +18,6 @@ const defaultLayout: SectionType[] = [
 
 const priceFirstLayout: SectionType[] = [
   "price",
-  "hero_view",
   "cta",
   "kyokan",
   "ansin",
@@ -81,33 +80,33 @@ export default function LPPage({
         <CtaButton />
 
         {/* 運営者情報（フッター） */}
-        <div className="w-full p-8 mt-12 bg-white text-gray-800 text-sm border-t border-gray-200">
+        <div className="w-full p-8 mt-12 bg-pink-50 text-gray-800 text-sm border-t border-pink-100">
           <h2 className="text-xl font-bold mb-4 text-center">運営者情報</h2>
-          <table className="w-full border-collapse mb-8 text-left">
+          <table className="w-full border-collapse mb-8 text-left bg-white rounded-lg overflow-hidden shadow-sm">
             <tbody>
-              <tr className="border-b">
-                <th className="py-3 px-4 bg-gray-100 font-semibold w-1/3">会社名</th>
-                <td className="py-3 px-4">株式会社8seAls</td>
+              <tr className="border-b border-pink-50">
+                <th className="py-3 px-4 bg-pink-100/50 font-semibold w-1/3 text-pink-900">会社名</th>
+                <td className="py-3 px-4 text-gray-700">株式会社8seAls</td>
               </tr>
-              <tr className="border-b">
-                <th className="py-3 px-4 bg-gray-100 font-semibold">代表者</th>
-                <td className="py-3 px-4">代表取締役 池末知史</td>
+              <tr className="border-b border-pink-50">
+                <th className="py-3 px-4 bg-pink-100/50 font-semibold text-pink-900">代表者</th>
+                <td className="py-3 px-4 text-gray-700">代表取締役 池末知史</td>
               </tr>
-              <tr className="border-b">
-                <th className="py-3 px-4 bg-gray-100 font-semibold">所在地</th>
-                <td className="py-3 px-4">〒273-0137<br />千葉県鎌ケ谷市道野辺本町2丁目26-1 コスモ鎌ヶ谷602</td>
+              <tr className="border-b border-pink-50">
+                <th className="py-3 px-4 bg-pink-100/50 font-semibold text-pink-900">所在地</th>
+                <td className="py-3 px-4 text-gray-700">〒273-0137<br />千葉県鎌ケ谷市道野辺本町2丁目26-1 コスモ鎌ヶ谷602</td>
               </tr>
-              <tr className="border-b">
-                <th className="py-3 px-4 bg-gray-100 font-semibold">電話番号</th>
-                <td className="py-3 px-4">080-2501-0289<br /><span className="text-xs text-gray-500">受付時間：10:00～17:00土日祝を除く</span></td>
+              <tr className="border-b border-pink-50">
+                <th className="py-3 px-4 bg-pink-100/50 font-semibold text-pink-900">電話番号</th>
+                <td className="py-3 px-4 text-gray-700">080-2501-0289<br /><span className="text-xs text-pink-400">受付時間：10:00～17:00土日祝を除く</span></td>
               </tr>
             </tbody>
           </table>
           <div className="flex flex-col items-center gap-4 text-primary">
-            <Link href="/tokushoho" className="text-blue-600 hover:underline">特定商取引法に基づく表記</Link>
-            <Link href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</Link>
+            <Link href="/tokushoho" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">特定商取引法に基づく表記</Link>
+            <Link href="/privacy" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">プライバシーポリシー</Link>
           </div>
-          <p className="text-center text-xs text-gray-400 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
+          <p className="text-center text-xs text-pink-300 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
         </div>
       </div>
 
