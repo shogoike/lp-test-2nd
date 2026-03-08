@@ -5,6 +5,5 @@ export default function Home({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const layoutParam = (searchParams.layout as string) || "default";
-  return <LPPage layoutType={layoutParam as any} searchParams={searchParams} />;
+  return <LPPage layoutType="default" searchParams={searchParams} />;
 }
