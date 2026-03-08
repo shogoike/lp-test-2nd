@@ -19,6 +19,7 @@ const defaultLayout: SectionType[] = [
 const priceFirstLayout: SectionType[] = [
   "price",
   "cta",
+  "hero_view",
   "kyokan",
   "ansin",
   "cta",
@@ -51,6 +52,11 @@ export default function LPPage({
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24 font-sans bg-pink-50">
       <div className="w-full max-w-2xl mx-auto shadow-2xl bg-white flex flex-col items-stretch relative">
+        
+        {/* ヘッダー（ロゴ/アイコン） */}
+        <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-pink-100 py-3 flex justify-center items-center shadow-sm">
+          <img src="/pic/icon/1_2x.avif" alt="Logo" className="h-8 md:h-10 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+        </header>
 
         {/* 動的配列による画像とボタンのレンダー */}
         {layoutConfig.map((section, idx) => {
