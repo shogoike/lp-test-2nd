@@ -12,6 +12,7 @@ export const images = {
   ],
   "ansin": [],
   "erabareruriyuu": [
+    "firstS__15138960.jpg",
     "S__14876695_0.jpg",
     "S__14876696_0.jpg",
     "S__14876697_0.jpg",
