@@ -57,7 +57,9 @@ export default function LPPage({
         
         {/* ヘッダー（ロゴ/アイコン） */}
         <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-pink-100 py-3 flex justify-center items-center shadow-sm">
-          <img src="/pic/icon/1_2x.avif" alt="Logo" className="h-8 md:h-10 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+          <Link href="https://lp-test-2nd.vercel.app/" className="hover:opacity-80 transition-opacity">
+            <img src="/pic/icon/1_2x.avif" alt="Logo" className="h-8 md:h-10 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+          </Link>
         </header>
 
         {/* 動的配列による画像とボタンのレンダー */}
