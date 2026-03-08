@@ -6,7 +6,7 @@ export default function CtaButton({ text = "今すぐLINE相談" }: { text?: str
     return (
         <div className="w-full flex justify-center bg-white py-6 md:py-8 px-4">
             <a
-                href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
+                href="/line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center w-full max-w-[280px] md:max-w-[320px] cursor-pointer relative z-10 scale-[0.90] md:scale-[0.95] mx-auto"

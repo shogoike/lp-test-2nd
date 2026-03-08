@@ -7,7 +7,7 @@ export default function FloatingCtaButton({ text = "LINEで今すぐ相談" }: {
         <div className="fixed bottom-0 left-0 w-full z-50 pointer-events-none flex justify-center pb-2">
             <div className="w-full md:max-w-md flex justify-center px-4">
                 <a
-                    href="https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url"
+                    href="/line"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pointer-events-auto group flex flex-col items-center justify-center w-full max-w-[300px] cursor-pointer drop-shadow-2xl animate-bounce"
