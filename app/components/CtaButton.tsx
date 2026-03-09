@@ -4,7 +4,7 @@ import { MessageCircle, ChevronRight } from "lucide-react";
 
 export default function CtaButton({ text = "今すぐLINE相談" }: { text?: string }) {
     return (
-        <div className="w-full flex justify-center bg-white py-6 md:py-8 px-4">
+        <div className="w-full flex justify-center bg-pink-50/50 py-6 md:py-8 px-4">
             <a
                 href="/line"
                 target="_blank"
