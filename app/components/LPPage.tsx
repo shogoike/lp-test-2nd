@@ -3,7 +3,6 @@ import Link from "next/link";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
 import QASection from "@/app/components/QASection";
-import HeroSection from "@/app/components/HeroSection";
 import CustomerVoices from "@/app/components/CustomerVoices";
 
 export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
@@ -70,9 +69,6 @@ export default function LPPage({
         {layoutConfig.map((section, idx) => {
           if (section === "cta") {
             return <CtaButton key={`cta-${idx}`} text={ctaText} />;
-          }
-          if (section === "hero_view") {
-            return <HeroSection key={`hero-${idx}`} />;
           }
           if (section === "voices") {
             return <CustomerVoices key={`voices-${idx}`} />;
