@@ -3,13 +3,16 @@ import Link from "next/link";
 import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
 import QASection from "@/app/components/QASection";
+import HeroSection from "@/app/components/HeroSection";
+import CustomerVoices from "@/app/components/CustomerVoices";
 
-export type SectionType = "hero_view" | "kyokan" | "price" | "ansin" | "erabareruriyuu" | "cta";
+export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
 
 const defaultLayout: SectionType[] = [
   "hero_view",
   "cta",
   "kyokan",
+  "voices",
   "price",
   "ansin",
   "cta",
@@ -20,6 +23,7 @@ const priceFirstLayout: SectionType[] = [
   "price",
   "cta",
   "hero_view",
+  "voices",
   "kyokan",
   "ansin",
   "cta",
@@ -62,14 +66,20 @@ export default function LPPage({
           </Link>
         </header>
 
-        {/* 動的配列による画像とボタンのレンダー */}
+        {/* 動的配列によるコンポーネントと画像のレンダー */}
         {layoutConfig.map((section, idx) => {
           if (section === "cta") {
             return <CtaButton key={`cta-${idx}`} text={ctaText} />;
           }
+          if (section === "hero_view") {
+            return <HeroSection key={`hero-${idx}`} />;
+          }
+          if (section === "voices") {
+            return <CustomerVoices key={`voices-${idx}`} />;
+          }
 
           // 画像セクションの場合
-          const imageFileName = getSafeImage(section, indices[section]);
+          const imageFileName = getSafeImage(section as keyof typeof images, indices[section as keyof typeof indices]);
           if (!imageFileName) return null;
 
           return (
