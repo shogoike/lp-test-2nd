@@ -2,6 +2,12 @@
 
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function LineRedirect() {
   const lineUrl = "https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url";
 
