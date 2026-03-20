@@ -6,16 +6,26 @@ export default function LineRedirect() {
   const lineUrl = "https://line.me/R/ti/p/@081xssun?ts=09232319&oat_content=url";
 
   useEffect(() => {
-    // コンバージョンタグ（Google Analytics, Meta Pixelなど）を発火させる場合は、
-    // ここ（リダイレクト前）に記述すると確実です。
-    // 例: window.gtag('event', 'conversion', {...});
-
-    // 1秒後に自動的にLINEアプリ・画面へ遷移
-    const timer = setTimeout(() => {
-      window.location.href = lineUrl;
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    // Google Ads コンバージョンを発火してからリダイレクト
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17871482472/7dHSCKn8gIwcEOjc5MlC",
+        value: 1.0,
+        currency: "JPY",
+        event_callback: () => {
+          window.location.href = lineUrl;
+        },
+      });
+      // コールバックが呼ばれない場合のフォールバック
+      setTimeout(() => {
+        window.location.href = lineUrl;
+      }, 2000);
+    } else {
+      // gtagが読み込まれていない場合はそのままリダイレクト
+      setTimeout(() => {
+        window.location.href = lineUrl;
+      }, 1000);
+    }
   }, []);
 
   return (
