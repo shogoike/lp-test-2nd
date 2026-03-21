@@ -78,7 +78,7 @@ export default function CustomerVoices() {
         <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-pink-50 to-transparent pointer-events-none" />
         <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-pink-50 to-transparent pointer-events-none" />
         
-        <p className="text-center text-xs text-pink-500 font-bold -mt-2 animate-bounce">
+        <p className="text-center text-xs text-pink-500 font-bold -mt-2">
           ← 横にスワイプして20件のレビューを見る →
         </p>
       </div>

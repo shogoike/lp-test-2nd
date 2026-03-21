@@ -9,9 +9,9 @@ export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" 
 
 const defaultLayout: SectionType[] = [
   "hero_view",
-  "cta",
-  "kyokan",
   "voices",
+  "kyokan",
+  "cta",
   "price",
   "ansin",
   "cta",
@@ -20,9 +20,8 @@ const defaultLayout: SectionType[] = [
 
 const priceFirstLayout: SectionType[] = [
   "price",
-  "cta",
-  "hero_view",
   "voices",
+  "hero_view",
   "kyokan",
   "ansin",
   "cta",
