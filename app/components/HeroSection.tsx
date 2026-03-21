@@ -32,7 +32,7 @@ export default function HeroSection() {
 
         {/* コスパ＆期間限定フック（ドンキホーテPOP風） */}
         <div className="w-full bg-yellow-100 border-4 border-yellow-400 rounded-2xl p-4 md:p-6 mb-6 shadow-xl relative mt-2 z-20 max-w-sm mx-auto">
-          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-600 text-white font-black px-4 md:px-6 py-2 rounded-full shadow-md whitespace-nowrap text-[12px] md:text-sm border-2 border-white animate-pulse">
+          <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-600 text-white font-black px-4 md:px-6 py-2 rounded-full shadow-md whitespace-nowrap text-[12px] md:text-sm border-2 border-white">
             ＼ 辞めるなら『学期末の今』が最大のチャンス！ ／
           </div>
           

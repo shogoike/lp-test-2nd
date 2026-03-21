@@ -61,7 +61,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${notoSansJP.variable} ${outfit.variable} font-sans antialiased bg-gray-50`}
+        className={`${notoSansJP.variable} ${outfit.variable} font-sans antialiased bg-pink-50`}
       >
         <noscript>
           <iframe

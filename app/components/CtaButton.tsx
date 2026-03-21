@@ -4,37 +4,28 @@ import { MessageCircle, ChevronRight } from "lucide-react";
 
 export default function CtaButton({ text = "今すぐLINE相談" }: { text?: string }) {
     return (
-        <div className="w-full flex justify-center bg-pink-50/50 py-6 md:py-8 px-4">
+        <div className="w-full flex justify-center bg-pink-50/50 py-4 md:py-6 px-4">
             <a
                 href="/line"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center w-full max-w-[280px] md:max-w-[320px] cursor-pointer relative z-10 scale-[0.90] md:scale-[0.95] mx-auto"
+                className="group flex flex-col items-center justify-center w-full max-w-[220px] md:max-w-[260px] cursor-pointer relative z-10 mx-auto"
             >
-                {/* チョコザップ風 上部バッジ（黄色＋赤文字など目立つ色） */}
+                {/* 上部バッジ */}
                 <div className="relative -mb-1 w-full px-2 z-20">
-                    <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[12px] md:text-sm font-black px-2 py-1.5 rounded-t-xl shadow-md flex flex-col items-center justify-center animate-bounce leading-tight" style={{ animationDuration: "2s" }}>
-                        <span>＼ スマホで最短1分！ ／</span>
+                    <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[10px] md:text-xs font-black px-2 py-1 rounded-t-xl shadow-md flex items-center justify-center gap-1 leading-tight">
                         <span>相談無料・24時間受付中</span>
                     </div>
                 </div>
 
                 {/* メインボタン（LINEグリーン） */}
-                <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-b-xl rounded-t-sm shadow-[0_6px_0_#048b3b] hover:shadow-[0_3px_0_#048b3b] hover:translate-y-1 p-1">
-                    <div className="bg-gradient-to-b from-white/30 to-transparent w-full h-full rounded-lg flex flex-col items-center justify-center py-2.5 px-2 relative overflow-hidden">
-                        {/* キラッと光るエフェクト */}
-                        <div className="absolute inset-0 w-[200%] h-full bg-white/30 skew-x-[-20deg] animate-[shine_2s_ease-in-out_infinite] -translate-x-full" />
-
-                        <div className="flex items-center gap-2 mb-1 z-10">
-                            <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-8 h-8 md:w-10 md:h-10 rounded-lg object-contain shadow-sm border-2 border-white" />
-                            <span className="text-white text-xl md:text-2xl font-black tracking-widest drop-shadow-md">
-                                {text}
-                            </span>
-                            <ChevronRight className="w-6 h-6 text-white font-black" />
-                        </div>
-                        <p className="text-yellow-200 text-xs md:text-sm font-bold opacity-100 z-10 mt-0.5 drop-shadow-sm">
-                            匿名OK！園に行く必要はありません！
-                        </p>
+                <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-b-xl rounded-t-sm shadow-[0_4px_0_#048b3b] hover:shadow-[0_2px_0_#048b3b] hover:translate-y-0.5 p-1">
+                    <div className="bg-gradient-to-b from-white/30 to-transparent w-full h-full rounded-lg flex items-center justify-center py-2 px-2 relative overflow-hidden gap-2">
+                        <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-6 h-6 md:w-7 md:h-7 rounded-md object-contain shadow-sm border border-white" />
+                        <span className="text-white text-base md:text-lg font-black tracking-wide drop-shadow-md">
+                            {text}
+                        </span>
+                        <ChevronRight className="w-4 h-4 text-white" />
                     </div>
                 </div>
             </a>
