@@ -16,6 +16,6 @@ export const images = {
     "S__15015945_0.jpg"
   ],
   "price": [
-    "S__14508055_0.jpg"
+    "green_price.jpg"
   ]
 };
