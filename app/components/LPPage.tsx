@@ -21,8 +21,8 @@ const defaultLayout: SectionType[] = [
 const priceFirstLayout: SectionType[] = [
   "price",
   "voices",
-  "hero_view",
   "kyokan",
+  "hero_view",
   "ansin",
   "cta",
   "erabareruriyuu"
