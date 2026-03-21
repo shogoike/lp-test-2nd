@@ -77,13 +77,26 @@ export default function LPPage({
           const imageFileName = getSafeImage(section as keyof typeof images, indices[section as keyof typeof indices]);
           if (!imageFileName) return null;
 
+          if (section === "hero_view") {
+            return (
+              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={`/pic/${section}/${imageFileName}`}
+                  alt={section}
+                  className="w-full h-auto block cursor-pointer"
+                  style={{ display: "block" }}
+                />
+              </a>
+            );
+          }
+
           return (
             <img
               key={`${section}-${idx}`}
               src={`/pic/${section}/${imageFileName}`}
               alt={section}
               className="w-full h-auto block"
-              style={{ display: "block" }} // 意図せぬ余白を防ぐ
+              style={{ display: "block" }}
             />
           );
         })}

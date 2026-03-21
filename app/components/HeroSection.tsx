@@ -64,17 +64,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* LINE CTAボタン */}
-        <a
-          href="/line"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white font-black text-sm md:text-base py-2.5 px-6 rounded-full transition-colors shadow-md mt-2 z-20"
-        >
-          <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-5 h-5 rounded-md border border-white/50" />
-          まずは無料で相談する
-        </a>
-        <p className="text-gray-500 text-[10px] mt-1.5 mb-2">匿名OK・24時間受付</p>
 
       </div>
     </section>
