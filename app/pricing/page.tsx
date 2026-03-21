@@ -161,7 +161,7 @@ export default function PricingPage() {
           <h2 className="text-lg font-black text-gray-900 mb-4 text-center">ご注意事項</h2>
           <ul className="space-y-2 text-xs text-gray-600 list-disc list-inside">
             <li>商品の性質上、原則として返金には応じておりません。ただし、法令に基づく場合や弊社に重大な過失があった場合は個別に対応いたします。</li>
-            <li>ご購入完了後、3〜5営業日以内にサービス提供に関するご案内をお送りします。</li>
+            <li>お支払い確認後、即日〜翌営業日以内に対応を開始します。</li>
             <li>期間限定価格は予告なく終了する場合があります。</li>
           </ul>
         </div>
