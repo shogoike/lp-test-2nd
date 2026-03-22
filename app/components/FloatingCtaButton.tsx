@@ -11,6 +11,8 @@ export default function FloatingCtaButton({ text = "LINEで今すぐ相談" }: {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pointer-events-auto group flex items-center justify-center w-full max-w-[240px] cursor-pointer drop-shadow-xl"
+                    data-cta="floating"
+                    data-cta-text={text}
                 >
                     {/* コンパクトなバナー型ボタン */}
                     <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 rounded-full p-0.5 shadow-lg">

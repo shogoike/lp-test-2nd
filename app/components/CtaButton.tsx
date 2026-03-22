@@ -10,6 +10,8 @@ export default function CtaButton({ text = "今すぐLINE相談" }: { text?: str
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center w-full max-w-[220px] md:max-w-[260px] cursor-pointer relative z-10 mx-auto"
+                data-cta="inline"
+                data-cta-text={text}
             >
                 {/* 上部バッジ */}
                 <div className="relative -mb-1 w-full px-2 z-20">

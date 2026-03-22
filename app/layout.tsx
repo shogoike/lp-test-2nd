@@ -15,8 +15,29 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "保育士専門退職代行アスヤメ",
-  description: "保育士さん専用の退職代行サービス。園への連絡不要、最短即日退職。一律14,800円、追加費用なし。",
+  title: "保育士専門退職代行アスヤメ｜一律14,800円・即日対応",
+  description: "保育士さん専用の退職代行サービス。園への連絡不要、最短即日退職。一律14,800円、追加費用なし。弁護士監修で安心。",
+  metadataBase: new URL("https://lp-test-2nd.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "保育士専門退職代行アスヤメ｜一律14,800円・即日対応",
+    description: "園への連絡不要、最短即日退職。保育士さん専用の退職代行サービス。弁護士監修・追加費用なし。",
+    url: "https://lp-test-2nd.vercel.app",
+    siteName: "退職代行アスヤメ",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "保育士専門退職代行アスヤメ",
+    description: "園への連絡不要、最短即日退職。一律14,800円・追加費用なし。",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 import Script from "next/script";
@@ -59,6 +80,40 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "vsfdu2epyn");
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "退職代行アスヤメ",
+                "description": "保育士さん専用の退職代行サービス",
+                "url": "https://lp-test-2nd.vercel.app",
+                "telephone": "080-2501-0289",
+                "address": {
+                  "@type": "PostalAddress",
+                  "postalCode": "273-0137",
+                  "addressRegion": "千葉県",
+                  "addressLocality": "鎌ケ谷市",
+                  "streetAddress": "道野辺本町2丁目26-1 コスモ鎌ヶ谷602"
+                },
+                "priceRange": "¥14,800"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  { "@type": "Question", "name": "子どもたちのことが心配です。私が辞めたら迷惑がかかりませんか？", "acceptedAnswer": { "@type": "Answer", "text": "ご安心ください。職員配置や引き継ぎ体制を整えるのは施設側の責任です。あなたが無理を続けて心身を壊してしまう前に、離れる選択をすることも決して無責任ではありません。" } },
+                  { "@type": "Question", "name": "担任を持っているので、途中で辞めるのは無責任でしょうか？", "acceptedAnswer": { "@type": "Answer", "text": "担任だから辞めてはいけない、ということはありません。限界を超えた状態で働き続ける方が、結果として子どもたちにもご自身にも負担が大きくなることがあります。" } },
+                  { "@type": "Question", "name": "学期の途中で辞めても大丈夫ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、学期の途中でも退職の相談は可能です。体調不良や精神的な限界がある場合は、無理を優先すべきではありません。" } },
+                  { "@type": "Question", "name": "人手不足なのに辞めていいのでしょうか？", "acceptedAnswer": { "@type": "Answer", "text": "人手不足を理由に、辞める権利まで我慢する必要はありません。人員確保は事業者側の責任です。" } },
+                  { "@type": "Question", "name": "本当に退職できますか？", "acceptedAnswer": { "@type": "Answer", "text": "状況によって進め方は異なりますが、多くの方が退職へ進んでいます。まずは今の状況を整理するだけでも気持ちは軽くなります。" } }
+                ]
+              }
+            ])
+          }}
+        />
       </head>
       <body
         className={`${notoSansJP.variable} ${outfit.variable} font-sans antialiased bg-pink-50`}

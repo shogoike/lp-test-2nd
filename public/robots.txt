@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /line
+Disallow: /MAIN_*
+
+Sitemap: https://lp-test-2nd.vercel.app/sitemap.xml

@@ -7,6 +7,14 @@ import CustomerVoices from "@/app/components/CustomerVoices";
 
 export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
 
+const sectionAltText: Record<string, string> = {
+  hero_view: "保育士専門退職代行アスヤメ メインビジュアル",
+  kyokan: "保育士さんのよくあるお悩み",
+  price: "退職代行アスヤメの料金プラン",
+  ansin: "安心サポート体制のご案内",
+  erabareruriyuu: "アスヤメが選ばれる理由",
+};
+
 const defaultLayout: SectionType[] = [
   "hero_view",
   "voices",
@@ -94,7 +102,7 @@ export default function LPPage({
                 <a href="/line" target="_blank" rel="noopener noreferrer">
                   <img
                     src={`/pic/${section}/${imageFileName}`}
-                    alt={section}
+                    alt={sectionAltText[section] || section}
                     className="w-full h-auto block cursor-pointer"
                     style={{ display: "block" }}
                   />
@@ -141,7 +149,7 @@ export default function LPPage({
             <img
               key={`${section}-${idx}`}
               src={`/pic/${section}/${imageFileName}`}
-              alt={section}
+              alt={sectionAltText[section] || section}
               className="w-full h-auto block"
               style={{ display: "block" }}
             />
