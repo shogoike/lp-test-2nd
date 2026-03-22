@@ -91,31 +91,14 @@ export default function LPPage({
             return <CtaButton key={`cta-${idx}`} text={ctaText} />;
           }
           if (section === "voices") {
-            return <CustomerVoices key={`voices-${idx}`} />;
-          }
-
-          // 画像セクションの場合
-          const imageFileName = getSafeImage(section as keyof typeof images, indices[section as keyof typeof indices]);
-          if (!imageFileName) return null;
-
-          if (section === "hero_view") {
             return (
-              <div key={`${section}-${idx}`}>
-                <a href="/line" target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={`/pic/${section}/${imageFileName}`}
-                    alt={sectionAltText[section] || section}
-                    className="w-full h-auto block cursor-pointer"
-                    style={{ display: "block", filter: "grayscale(0%)" }}
-                  />
-                </a>
+              <div key={`voices-${idx}`}>
+                <CustomerVoices />
                 {/* 流れるテキスト */}
                 <div className="overflow-hidden bg-pink-50 py-4">
                   <div
                     className="flex whitespace-nowrap"
-                    style={{
-                      animation: "marquee 10s linear infinite",
-                    }}
+                    style={{ animation: "marquee 10s linear infinite" }}
                   >
                     {[...Array(3)].map((_, i) => (
                       <span
@@ -144,6 +127,23 @@ export default function LPPage({
                   </div>
                 </div>
               </div>
+            );
+          }
+
+          // 画像セクションの場合
+          const imageFileName = getSafeImage(section as keyof typeof images, indices[section as keyof typeof indices]);
+          if (!imageFileName) return null;
+
+          if (section === "hero_view") {
+            return (
+              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={`/pic/${section}/${imageFileName}`}
+                  alt={sectionAltText[section] || section}
+                  className="w-full h-auto block cursor-pointer"
+                  style={{ display: "block", filter: "grayscale(0%)" }}
+                />
+              </a>
             );
           }
 
