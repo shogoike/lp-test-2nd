@@ -104,7 +104,7 @@ export default function LPPage({
                     src={`/pic/${section}/${imageFileName}`}
                     alt={sectionAltText[section] || section}
                     className="w-full h-auto block cursor-pointer"
-                    style={{ display: "block" }}
+                    style={{ display: "block", filter: "grayscale(0%)" }}
                   />
                 </a>
                 {/* 流れるテキスト */}
