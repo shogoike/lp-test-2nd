@@ -146,6 +146,20 @@ export default function LPPage({
             );
           }
 
+          // priceFirstLayoutの先頭画像にはLINEリンクを付ける
+          if (idx === 0 && layoutType === "price") {
+            return (
+              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={`/pic/${section}/${imageFileName}`}
+                  alt={sectionAltText[section] || section}
+                  className="w-full h-auto block cursor-pointer"
+                  style={{ display: "block" }}
+                />
+              </a>
+            );
+          }
+
           return (
             <img
               key={`${section}-${idx}`}

@@ -56,11 +56,17 @@ body {
 .dark-theme td,
 .dark-theme a,
 .dark-theme button {
-  color: #e8b4c8 !important;
+  color: #e8e8e8 !important;
 }
 .dark-theme h1,
 .dark-theme h2 {
-  color: #f0c8d8 !important;
+  color: #ffffff !important;
+}
+.dark-theme .text-pink-500,
+.dark-theme .text-pink-600,
+.dark-theme .text-red-400,
+.dark-theme .text-red-600 {
+  color: #f9a8c9 !important;
 }
 .dark-theme section,
 .dark-theme .bg-pink-50,
@@ -78,18 +84,11 @@ body {
 .dark-theme .text-gray-800,
 .dark-theme .text-gray-700,
 .dark-theme .text-gray-900 {
-  color: #d4a0b8 !important;
+  color: #e0e0e0 !important;
 }
 .dark-theme .text-gray-600,
-.dark-theme .text-gray-500,
-.dark-theme .text-xs {
-  color: #b08898 !important;
-}
-.dark-theme .text-pink-500 {
-  color: #e8a0b8 !important;
-}
-.dark-theme .text-pink-600 {
-  color: #d090a8 !important;
+.dark-theme .text-gray-500 {
+  color: #b0b0b0 !important;
 }
 .dark-theme .bg-pink-100 {
   background: #3a2a30 !important;
@@ -101,6 +100,16 @@ body {
 .dark-theme .shadow-sm,
 .dark-theme .shadow-2xl {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+/* LINEボタンの色を保護 */
+.dark-theme [data-cta] span {
+  color: #ffffff !important;
+}
+.dark-theme .fill-yellow-400 {
+  fill: #facc15 !important;
+}
+.dark-theme .text-yellow-400 {
+  color: #facc15 !important;
 }
 
 @keyframes marquee {
