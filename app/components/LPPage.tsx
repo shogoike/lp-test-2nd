@@ -63,7 +63,7 @@ export default function LPPage({
   };
 
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-start font-sans bg-pink-50${darkTheme ? " dark-theme" : ""}`}>
+    <main className={`flex min-h-screen flex-col items-center justify-start pb-16 font-sans bg-pink-50${darkTheme ? " dark-theme" : ""}`}>
       <div className="w-full max-w-2xl mx-auto shadow-2xl flex flex-col items-stretch relative overflow-hidden" style={{ background: "rgba(255,255,255,0.85)" }}>
         {/* 背景画像 */}
         <div className="absolute inset-0 z-0 pointer-events-none">
