@@ -13,8 +13,8 @@ export default function FloatingCtaButton({ text = "LINEで今すぐ相談" }: {
                 data-cta="floating"
                 data-cta-text={text}
             >
-                <div className="bg-[#06C755] rounded-full p-0.5 shadow-lg">
-                    <div className="flex items-center justify-center py-1.5 px-3 bg-gradient-to-b from-white/20 to-transparent rounded-full gap-1.5">
+                <div className="bg-gray-900 rounded-full p-0.5 shadow-lg">
+                    <div className="flex items-center justify-center py-1.5 px-3 bg-gradient-to-b from-white/10 to-transparent rounded-full gap-1.5">
                         <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-5 h-5 rounded-md object-contain border border-white/50" />
                         <span className="text-white text-xs font-black tracking-wide drop-shadow-md">
                             {text}

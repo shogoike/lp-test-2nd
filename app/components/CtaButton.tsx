@@ -20,9 +20,9 @@ export default function CtaButton({ text = "今すぐLINE相談" }: { text?: str
                     </div>
                 </div>
 
-                {/* メインボタン（LINEグリーン） */}
-                <div className="w-full bg-[#06C755] hover:bg-[#05b34c] transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-b-xl rounded-t-sm shadow-[0_4px_0_#048b3b] hover:shadow-[0_2px_0_#048b3b] hover:translate-y-0.5 p-1">
-                    <div className="bg-gradient-to-b from-white/30 to-transparent w-full h-full rounded-lg flex items-center justify-center py-2 px-2 relative overflow-hidden gap-2">
+                {/* メインボタン（黒） */}
+                <div className="w-full bg-gray-900 hover:bg-gray-800 transition-all duration-300 transform group-hover:scale-[1.02] active:scale-95 rounded-b-xl rounded-t-sm shadow-[0_4px_0_#1a1a1a] hover:shadow-[0_2px_0_#1a1a1a] hover:translate-y-0.5 p-1">
+                    <div className="bg-gradient-to-b from-white/10 to-transparent w-full h-full rounded-lg flex items-center justify-center py-2 px-2 relative overflow-hidden gap-2">
                         <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-6 h-6 md:w-7 md:h-7 rounded-md object-contain shadow-sm border border-white" />
                         <span className="text-white text-base md:text-lg font-black tracking-wide drop-shadow-md">
                             {text}

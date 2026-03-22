@@ -49,7 +49,7 @@ export default function CustomerVoices() {
           {reviews.map((review) => (
             <div 
               key={review.id} 
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-5 shadow-md snap-center relative border border-pink-100 flex flex-col"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-pink-50/80 rounded-2xl p-5 shadow-md snap-center relative border border-pink-100 flex flex-col"
             >
               <Quote className="absolute top-4 right-4 text-pink-50 w-12 h-12 -z-10" />
               
