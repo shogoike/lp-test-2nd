@@ -2,6 +2,7 @@ import React from "react";
 import { Star, User, Quote } from "lucide-react";
 
 const reviews = [
+  { id: 21, age: "20代後半", tenure: "3年目", text: "一番不安だった引き継ぎも、園との間に入って調整してもらえました。必要な書類の郵送方法まで教えていただき、出勤せずに全て完了。引き継ぎを理由に引き止められていたので、本当に助かりました。" },
   { id: 1, age: "20代前半", tenure: "1年目", text: "毎日怒鳴られて限界でした。LINE相談した翌日には代わりに園長へ伝えてもらえ、本当に家から出ずに辞められました。感謝しかないです。" },
   { id: 2, age: "20代後半", tenure: "4年目", text: "持ち帰り残業が当たり前で体調を崩しました。辞めたいと言っても『人手不足なのに』と引き止められ困っていましたが、代行を使ったらスムーズでした。" },
   { id: 3, age: "30代前半", tenure: "7年目", text: "お局先生との人間関係で精神的に参っていました。自分で言う勇気が出ず利用しましたが、あっという間に手続きが終わり、もっと早く使えばよかったです。" },
@@ -79,7 +80,7 @@ export default function CustomerVoices() {
         <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-pink-50 to-transparent pointer-events-none" />
         
         <p className="text-center text-xs text-pink-500 font-bold -mt-2">
-          ← 横にスワイプして20件のレビューを見る →
+          ← 横にスワイプして{reviews.length}件のレビューを見る →
         </p>
       </div>
     </section>
