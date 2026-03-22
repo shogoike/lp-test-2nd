@@ -1,6 +1,6 @@
 export const images = {
   "hero_view": [
-    "gemini_hero.jpg"
+    "hero1.jpg"
   ],
   "ansin": [],
   "erabareruriyuu": [

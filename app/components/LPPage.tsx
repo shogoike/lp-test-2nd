@@ -55,7 +55,16 @@ export default function LPPage({
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24 font-sans bg-pink-50">
-      <div className="w-full max-w-2xl mx-auto shadow-2xl bg-white flex flex-col items-stretch relative">
+      <div className="w-full max-w-2xl mx-auto shadow-2xl flex flex-col items-stretch relative overflow-hidden" style={{ background: "rgba(255,255,255,0.85)" }}>
+        {/* 背景画像 */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="/pic/bg-plant.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+            style={{ opacity: 0.3, filter: "saturate(0.4) brightness(1.1) sepia(0.3) hue-rotate(310deg)" }}
+          />
+        </div>
         
         {/* ヘッダー（ロゴ/アイコン） */}
         <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-pink-100 py-3 flex justify-center items-center shadow-sm">
@@ -64,6 +73,8 @@ export default function LPPage({
           </Link>
         </header>
 
+        {/* コンテンツ（背景画像の上に表示） */}
+        <div className="relative z-10">
         {/* 動的配列によるコンポーネントと画像のレンダー */}
         {layoutConfig.map((section, idx) => {
           if (section === "cta") {
@@ -173,6 +184,7 @@ export default function LPPage({
           </div>
           <p className="text-center text-xs text-pink-300 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
         </div>
+        </div>{/* /relative z-10 */}
       </div>
 
       {/* Sticky LINE Button / CTR */}
