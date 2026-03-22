@@ -79,14 +79,50 @@ export default function LPPage({
 
           if (section === "hero_view") {
             return (
-              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={`/pic/${section}/${imageFileName}`}
-                  alt={section}
-                  className="w-full h-auto block cursor-pointer"
-                  style={{ display: "block" }}
-                />
-              </a>
+              <div key={`${section}-${idx}`}>
+                <a href="/line" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={`/pic/${section}/${imageFileName}`}
+                    alt={section}
+                    className="w-full h-auto block cursor-pointer"
+                    style={{ display: "block" }}
+                  />
+                </a>
+                {/* 流れるテキスト */}
+                <div className="overflow-hidden bg-pink-50 py-4">
+                  <div
+                    className="flex whitespace-nowrap"
+                    style={{
+                      animation: "marquee 10s linear infinite",
+                    }}
+                  >
+                    {[...Array(3)].map((_, i) => (
+                      <span
+                        key={i}
+                        className="text-3xl md:text-5xl tracking-wider mx-8 shrink-0"
+                        style={{
+                          fontFamily: '"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif',
+                          fontWeight: 300,
+                          color: "transparent",
+                          WebkitTextStroke: "1px rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        すべての保育士を
+                        <span
+                          style={{
+                            fontWeight: 900,
+                            color: "rgb(236, 72, 153)",
+                            WebkitTextStroke: "0px",
+                          }}
+                        >
+                          退職のストレス
+                        </span>
+                        から解放。
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             );
           }
 

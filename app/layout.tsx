@@ -62,6 +62,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${notoSansJP.variable} ${outfit.variable} font-sans antialiased bg-pink-50`}
+        suppressHydrationWarning
       >
         <noscript>
           <iframe
