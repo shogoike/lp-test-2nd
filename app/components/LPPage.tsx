@@ -201,6 +201,7 @@ export default function LPPage({
             </tbody>
           </table>
           <div className="flex flex-col items-center gap-4 text-primary">
+            <Link href="/rinen" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">私たちの思い</Link>
             <Link href="/pricing" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">料金について</Link>
             <Link href="/tokushoho" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">特定商取引法に基づく表記</Link>
             <Link href="/privacy" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">プライバシーポリシー</Link>

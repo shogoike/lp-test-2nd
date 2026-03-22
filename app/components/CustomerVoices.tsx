@@ -30,7 +30,7 @@ export default function CustomerVoices() {
     <section className="w-full bg-pink-50 py-12 overflow-hidden border-y border-pink-100 mt-4 mb-4">
       <div className="max-w-2xl mx-auto px-4 mb-6 text-center">
         <h2 className="text-2xl md:text-3xl font-black text-gray-800 mb-2 flex items-center justify-center gap-2">
-          <span className="text-pink-500">ご利用いただいた</span>保育士さんの声
+          ご利用いただいた<span className="text-pink-500">保育士さん</span>の声
         </h2>
         <p className="text-gray-600 font-bold text-[13px] md:text-sm">
           実際に当サービスを利用して、<br className="md:hidden" />つらい現状から解放された方々です！
