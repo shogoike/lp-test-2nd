@@ -41,6 +41,68 @@ body {
   background: var(--background);
 }
 
+/* Dark theme overrides */
+.dark-theme {
+  background: #1a1a1a !important;
+}
+.dark-theme > div {
+  background: rgba(30, 30, 30, 0.95) !important;
+}
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme p,
+.dark-theme span,
+.dark-theme th,
+.dark-theme td,
+.dark-theme a,
+.dark-theme button {
+  color: #e8b4c8 !important;
+}
+.dark-theme h1,
+.dark-theme h2 {
+  color: #f0c8d8 !important;
+}
+.dark-theme section,
+.dark-theme .bg-pink-50,
+.dark-theme .bg-pink-50\/50 {
+  background: #222 !important;
+}
+.dark-theme .bg-white,
+.dark-theme .bg-white\/95 {
+  background: #2a2a2a !important;
+}
+.dark-theme .border-pink-100,
+.dark-theme .border-gray-100 {
+  border-color: #3a3a3a !important;
+}
+.dark-theme .text-gray-800,
+.dark-theme .text-gray-700,
+.dark-theme .text-gray-900 {
+  color: #d4a0b8 !important;
+}
+.dark-theme .text-gray-600,
+.dark-theme .text-gray-500,
+.dark-theme .text-xs {
+  color: #b08898 !important;
+}
+.dark-theme .text-pink-500 {
+  color: #e8a0b8 !important;
+}
+.dark-theme .text-pink-600 {
+  color: #d090a8 !important;
+}
+.dark-theme .bg-pink-100 {
+  background: #3a2a30 !important;
+}
+.dark-theme .bg-pink-100\/50 {
+  background: rgba(58, 42, 48, 0.5) !important;
+}
+.dark-theme .shadow-md,
+.dark-theme .shadow-sm,
+.dark-theme .shadow-2xl {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);

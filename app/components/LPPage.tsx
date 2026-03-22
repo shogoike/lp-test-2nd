@@ -30,7 +30,6 @@ const priceFirstLayout: SectionType[] = [
   "price",
   "voices",
   "kyokan",
-  "hero_view",
   "ansin",
   "cta",
   "erabareruriyuu"
@@ -64,7 +63,7 @@ export default function LPPage({
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start font-sans bg-pink-50" style={darkTheme ? { filter: "invert(1) hue-rotate(180deg)" } : undefined}>
+    <main className={`flex min-h-screen flex-col items-center justify-start font-sans bg-pink-50${darkTheme ? " dark-theme" : ""}`}>
       <div className="w-full max-w-2xl mx-auto shadow-2xl flex flex-col items-stretch relative overflow-hidden" style={{ background: "rgba(255,255,255,0.85)" }}>
         {/* 背景画像 */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -141,7 +140,7 @@ export default function LPPage({
                   src={`/pic/${section}/${imageFileName}`}
                   alt={sectionAltText[section] || section}
                   className="w-full h-auto block cursor-pointer"
-                  style={{ display: "block", filter: darkTheme ? "invert(1) hue-rotate(180deg)" : undefined }}
+                  style={{ display: "block" }}
                 />
               </a>
             );
@@ -153,7 +152,7 @@ export default function LPPage({
               src={`/pic/${section}/${imageFileName}`}
               alt={sectionAltText[section] || section}
               className="w-full h-auto block"
-              style={{ display: "block", filter: darkTheme ? "invert(1) hue-rotate(180deg)" : undefined }}
+              style={{ display: "block" }}
             />
           );
         })}
