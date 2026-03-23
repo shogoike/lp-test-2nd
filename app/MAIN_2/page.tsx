@@ -10,5 +10,5 @@ export default function Main2Page({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  return <LPPage layoutType="price" searchParams={{ ...searchParams, hero: "2", price: "1" }} darkTheme customLayout={["hero_view", "voices", "qa", "cta", "roadmap", "kyokan", "ansin", "cta", "erabareruriyuu"]} />;
+  return <LPPage layoutType="price" searchParams={{ ...searchParams, hero: "2", price: "1" }} darkTheme customLayout={["hero_view", "voices", "cta", "qa", "cta", "roadmap", "kyokan", "ansin", "cta", "erabareruriyuu"]} />;
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Flag,
   MessageSquare,
@@ -8,6 +9,10 @@ import {
   Shield,
   Sparkles,
 } from "lucide-react";
+
+const B = ({ children }: { children: React.ReactNode }) => (
+  <strong className="font-bold text-white">{children}</strong>
+);
 
 export const heroContent = {
   catchCopy: "子どもたちの未来と同じくらい、\nあなたの人生も大切。",
@@ -27,7 +32,7 @@ export const roadmapSteps = [
     timing: "最短当日",
     action:
       "まずはLINEでお気軽にご相談ください。今の状況やお悩みをお聞きし、最適な退職プランをご提案します。匿名でOK、24時間受付しています。",
-    tips: "「辞めたいけど言えない」「引き止められている」など、どんな状況でもご相談ください。",
+    tips: <><B>「辞めたいけど言えない」「引き止められている」</B>など、どんな状況でもご相談ください。</>,
     icon: Flag,
     color: "orange" as const,
   },
@@ -37,7 +42,7 @@ export const roadmapSteps = [
     timing: "ご納得いただけたら",
     action:
       "プランにご納得いただけたら、お申し込みへ。お支払い確認後、すぐに退職手続きの準備を開始します。",
-    tips: "一律14,800円、追加費用は一切かかりません。",
+    tips: <><B>一律14,800円</B>、追加費用は一切かかりません。</>,
     icon: MessageSquare,
     color: "pink" as const,
   },
@@ -47,7 +52,7 @@ export const roadmapSteps = [
     timing: "最短即日対応",
     action:
       "あなたに代わって園へ退職の意思を伝えます。園長や主任との直接のやり取りは一切不要。電話が来ることもありません。",
-    tips: "退職届の作成もアドバイスしますので、書類の心配もいりません。",
+    tips: <><B>退職届の作成もアドバイス</B>しますので、書類の心配もいりません。</>,
     icon: FileText,
     color: "purple" as const,
   },
@@ -57,7 +62,7 @@ export const roadmapSteps = [
     timing: "退職日まで",
     action:
       "引き継ぎの調整も私たちが園との間に入って対応します。児童票や行事計画など、必要な引き継ぎ事項を整理し、あなたが園と直接やり取りしなくて済むようサポートします。",
-    tips: "「途中で辞めたら迷惑がかかる」という心配は不要です。園が困らない形で進めます。",
+    tips: <><B>「途中で辞めたら迷惑がかかる」という心配は不要</B>です。園が困らない形で進めます。</>,
     icon: Users,
     color: "blue" as const,
   },
@@ -67,7 +72,7 @@ export const roadmapSteps = [
     timing: "手続き完了後",
     action:
       "退職届の受理確認、備品の返却方法、離職票などの書類受け取りまでフォロー。出勤せずにすべて完結できます。",
-    tips: "有給休暇の消化もサポート。安心して次のステップへ踏み出しましょう！",
+    tips: <><B>有給休暇の消化もサポート</B>。安心して次のステップへ踏み出しましょう！</>,
     icon: Smile,
     color: "green" as const,
   },
