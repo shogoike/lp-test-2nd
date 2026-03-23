@@ -16,7 +16,7 @@ export default function CtaButton({ text = "今すぐLINE相談" }: { text?: str
                 {/* 上部バッジ */}
                 <div className="relative -mb-1 w-full px-2 z-20">
                     <div className="bg-yellow-400 border-2 border-yellow-500 text-red-700 text-[10px] md:text-xs font-black px-2 py-1 rounded-t-xl shadow-md flex items-center justify-center gap-1 leading-tight">
-                        <span>相談無料・24時間受付中</span>
+                        <span>LINEからの申し込みで5,000円OFF</span>
                     </div>
                 </div>
 
