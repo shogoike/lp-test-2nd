@@ -49,35 +49,32 @@ export default function CustomerVoices() {
           {reviews.map((review) => (
             <div 
               key={review.id} 
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-pink-50/80 rounded-2xl p-5 shadow-md snap-center relative border border-pink-100 flex flex-col"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-gray-900 rounded-2xl p-5 shadow-md snap-center relative border border-gray-700 flex flex-col"
             >
-              <Quote className="absolute top-4 right-4 text-pink-50 w-12 h-12 -z-10" />
-              
+              <Quote className="absolute top-4 right-4 text-gray-800 w-12 h-12 -z-10" />
+
               <div className="flex items-center gap-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              
-              <p className="text-gray-800 text-sm font-medium leading-relaxed mb-4 flex-grow">
+
+              <p className="text-gray-100 text-sm font-medium leading-relaxed mb-4 flex-grow">
                 「{review.text}」
               </p>
-              
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-100 mt-auto">
-                <div className="bg-pink-100 p-2 rounded-full">
-                  <User className="w-4 h-4 text-pink-500" />
+
+              <div className="flex items-center gap-3 pt-3 border-t border-gray-700 mt-auto">
+                <div className="bg-gray-800 p-2 rounded-full">
+                  <User className="w-4 h-4 text-pink-400" />
                 </div>
                 <div>
-                  <p className="text-gray-900 font-bold text-sm">{review.age}</p>
-                  <p className="text-gray-500 text-xs">経験年数: {review.tenure}</p>
+                  <p className="text-white font-bold text-sm">{review.age}</p>
+                  <p className="text-gray-400 text-xs">経験年数: {review.tenure}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
-        <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-pink-50 to-transparent pointer-events-none" />
-        <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-pink-50 to-transparent pointer-events-none" />
         
         <p className="text-center text-xs text-pink-500 font-bold -mt-2">
           ← 横にスワイプして{reviews.length}件のレビューを見る →
