@@ -13,14 +13,12 @@ export default function FloatingCtaButton({ text = "無料で話をする" }: { 
                 data-cta="floating"
                 data-cta-text={text}
             >
-                <div className="bg-gray-900 rounded-full p-0.5 shadow-lg">
-                    <div className="flex items-center justify-center py-1.5 px-3 bg-gradient-to-b from-white/10 to-transparent rounded-full gap-1.5">
-                        <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-5 h-5 rounded-md object-contain border border-white/50" />
-                        <span className="text-white text-xs font-black tracking-wide drop-shadow-md">
-                            {text}
-                        </span>
-                        <ChevronRight className="w-3 h-3 text-white" />
-                    </div>
+                <div className="bg-gray-900 rounded-full shadow-lg flex items-center justify-center py-2 px-4 gap-1.5">
+                    <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-5 h-5 rounded-md object-contain" />
+                    <span className="text-white text-xs font-black tracking-wide drop-shadow-md">
+                        {text}
+                    </span>
+                    <ChevronRight className="w-3 h-3 text-white" />
                 </div>
             </a>
         </div>

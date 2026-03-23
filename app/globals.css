@@ -178,6 +178,21 @@ body {
 .dark-theme .ring-offset-white {
   --tw-ring-offset-color: #1F3044 !important;
 }
+.dark-theme .ring-orange-200,
+.dark-theme .ring-pink-200,
+.dark-theme .ring-purple-200,
+.dark-theme .ring-blue-200,
+.dark-theme .ring-green-200 {
+  --tw-ring-color: rgba(255, 255, 255, 0.15) !important;
+}
+/* カード内テキストを読みやすく */
+.dark-theme .text-sm.leading-relaxed,
+.dark-theme .text-gray-600.text-sm {
+  color: #D0D8E0 !important;
+}
+.dark-theme .text-xs.text-gray-600 {
+  color: #B0BCC8 !important;
+}
 /* QA・フッター背景 */
 .dark-theme .bg-gradient-to-b {
   background: #1B2A3C !important;
