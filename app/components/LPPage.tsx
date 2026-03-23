@@ -32,6 +32,7 @@ const priceFirstLayout: SectionType[] = [
   "hero_view",
   "price",
   "voices",
+  "cta",
   "kyokan",
   "ansin",
   "cta",
