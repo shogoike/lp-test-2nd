@@ -2,7 +2,7 @@
 
 import { ChevronRight } from "lucide-react";
 
-export default function FloatingCtaButton({ text = "LINEで今すぐ相談" }: { text?: string }) {
+export default function FloatingCtaButton({ text = "無料で話をする" }: { text?: string }) {
     return (
         <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center pb-3 px-4 pointer-events-none">
             <a
