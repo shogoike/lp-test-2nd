@@ -6,8 +6,9 @@ import QASection from "@/app/components/QASection";
 import CustomerVoices from "@/app/components/CustomerVoices";
 import HeroWithModal from "@/app/components/HeroWithModal";
 import LineImageLink from "@/app/components/LineImageLink";
+import Roadmap from "@/app/components/Roadmap";
 
-export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
+export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta" | "roadmap";
 
 const sectionAltText: Record<string, string> = {
   hero_view: "保育士専門退職代行アスヤメ メインビジュアル",
@@ -45,14 +46,16 @@ export default function LPPage({
   ctaText,
   darkTheme = false,
   excludeSections = [],
+  customLayout,
 }: {
   layoutType?: "default" | "price";
   searchParams?: { [key: string]: string | string[] | undefined };
   ctaText?: string;
   darkTheme?: boolean;
   excludeSections?: SectionType[];
+  customLayout?: SectionType[];
 }) {
-  const baseLayout = layoutType === "price" ? priceFirstLayout : defaultLayout;
+  const baseLayout = customLayout ?? (layoutType === "price" ? priceFirstLayout : defaultLayout);
   const layoutConfig = baseLayout.filter((s) => !excludeSections.includes(s));
 
   const getSafeImage = (category: keyof typeof images, index: number) => {
@@ -95,6 +98,9 @@ export default function LPPage({
         {layoutConfig.map((section, idx) => {
           if (section === "cta") {
             return <CtaButton key={`cta-${idx}`} text={ctaText} />;
+          }
+          if (section === "roadmap") {
+            return <Roadmap key={`roadmap-${idx}`} />;
           }
           if (section === "voices") {
             return (
