@@ -3,66 +3,34 @@
 import { Lightbulb } from "lucide-react";
 import { roadmapSteps } from "@/lib/guideContent";
 
-const colorMap: Record<string, Record<string, string>> = {
-  orange: {
-    bg: "bg-orange-100",
-    text: "text-orange-500",
-    ring: "ring-orange-200",
-    badge: "bg-orange-50 text-orange-600 border-orange-200",
-    line: "bg-gradient-to-b from-orange-300 to-pink-300",
-    tips: "bg-orange-50 border-orange-100",
-  },
-  pink: {
-    bg: "bg-pink-100",
-    text: "text-pink-500",
-    ring: "ring-pink-200",
-    badge: "bg-pink-50 text-pink-600 border-pink-200",
-    line: "bg-gradient-to-b from-pink-300 to-purple-300",
-    tips: "bg-pink-50 border-pink-100",
-  },
-  purple: {
-    bg: "bg-purple-100",
-    text: "text-purple-500",
-    ring: "ring-purple-200",
-    badge: "bg-purple-50 text-purple-600 border-purple-200",
-    line: "bg-gradient-to-b from-purple-300 to-blue-300",
-    tips: "bg-purple-50 border-purple-100",
-  },
-  blue: {
-    bg: "bg-blue-100",
-    text: "text-blue-500",
-    ring: "ring-blue-200",
-    badge: "bg-blue-50 text-blue-600 border-blue-200",
-    line: "bg-gradient-to-b from-blue-300 to-green-300",
-    tips: "bg-blue-50 border-blue-100",
-  },
-  green: {
-    bg: "bg-green-100",
-    text: "text-green-500",
-    ring: "ring-green-200",
-    badge: "bg-green-50 text-green-600 border-green-200",
-    line: "bg-green-300",
-    tips: "bg-green-50 border-green-100",
-  },
-};
+const stepColors = [
+  { icon: "#D88FA3", iconBg: "#3A2035", ring: "rgba(216,143,163,0.2)", line: "#3A506A" },
+  { icon: "#D88FA3", iconBg: "#3A2035", ring: "rgba(216,143,163,0.2)", line: "#3A506A" },
+  { icon: "#D88FA3", iconBg: "#3A2035", ring: "rgba(216,143,163,0.2)", line: "#3A506A" },
+  { icon: "#D88FA3", iconBg: "#3A2035", ring: "rgba(216,143,163,0.2)", line: "#3A506A" },
+  { icon: "#D88FA3", iconBg: "#3A2035", ring: "rgba(216,143,163,0.2)", line: "#3A506A" },
+];
 
 export default function Roadmap() {
   return (
-    <section className="w-full py-12 md:py-16 bg-white">
+    <section className="w-full py-12 md:py-16" style={{ background: "#1F3044" }}>
       <div className="max-w-2xl mx-auto px-4">
         <div className="text-center mb-10">
-          <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-orange-100 to-pink-100 text-orange-600 text-sm font-bold rounded-full mb-3">
+          <span
+            className="inline-block px-4 py-1.5 text-sm font-bold rounded-full mb-3"
+            style={{ background: "#2E4A62", color: "#D88FA3" }}
+          >
             ロードマップ
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#FFFFFF" }}>
             退職までの5ステップ
           </h2>
-          <p className="text-gray-500 text-sm">一つずつ、焦らず進めていきましょう</p>
+          <p className="text-sm" style={{ color: "#8A9BAD" }}>一つずつ、焦らず進めていきましょう</p>
         </div>
 
         <div className="relative">
           {roadmapSteps.map((step, index) => {
-            const colors = colorMap[step.color];
+            const sc = stepColors[index];
             const IconComponent = step.icon;
             const isLast = index === roadmapSteps.length - 1;
 
@@ -70,39 +38,66 @@ export default function Roadmap() {
               <div key={step.step} className="relative flex gap-4 md:gap-6 pb-10 last:pb-0">
                 {!isLast && (
                   <div
-                    className={`absolute left-5 md:left-6 top-14 w-0.5 ${colors.line}`}
-                    style={{ height: "calc(100% - 2.5rem)" }}
+                    className="absolute left-5 md:left-6 top-14 w-0.5"
+                    style={{ height: "calc(100% - 2.5rem)", background: sc.line }}
                   />
                 )}
 
                 <div className="flex-shrink-0 relative">
                   <div
-                    className={`w-10 h-10 md:w-12 md:h-12 ${colors.bg} rounded-full flex items-center justify-center ring-4 ${colors.ring} ring-offset-2 ring-offset-white`}
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      background: sc.iconBg,
+                      boxShadow: `0 0 0 4px ${sc.ring}, 0 0 0 6px #1F3044`,
+                    }}
                   >
-                    <IconComponent size={20} className={colors.text} />
+                    <IconComponent size={20} style={{ color: sc.icon }} />
                   </div>
-                  <span className="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs font-bold text-gray-500 border border-gray-200 shadow-sm">
+                  <span
+                    className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold border shadow-sm"
+                    style={{ background: "#1F3044", color: "#8A9BAD", borderColor: "#3A506A" }}
+                  >
                     {step.step}
                   </span>
                 </div>
 
                 <div className="flex-grow">
-                  <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div
+                    className="rounded-2xl p-5 md:p-6 transition-shadow duration-300"
+                    style={{ background: "#243A50", border: "1px solid #2E4A62" }}
+                  >
                     <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">
+                      <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#8A9BAD" }}>
                         Step {step.step}
                       </span>
-                      <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${colors.badge}`}>
+                      <span
+                        className="text-xs font-bold px-2.5 py-1 rounded-full border"
+                        style={{ background: "#2E4A62", color: "#C5CED8", borderColor: "#3A506A" }}
+                      >
                         {step.timing}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-2">{step.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{step.action}</p>
+                    <h3 className="text-lg font-bold mb-2" style={{ color: "#FFFFFF" }}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#C5CED8" }}>
+                      {step.action}
+                    </p>
 
                     {step.tips && (
-                      <div className={`flex items-start gap-2 p-3 rounded-xl border ${colors.tips}`}>
-                        <Lightbulb size={16} className={`${colors.text} flex-shrink-0 mt-0.5`} />
-                        <p className="text-xs text-gray-600 leading-relaxed">{step.tips}</p>
+                      <div
+                        className="flex items-start gap-2 p-3 rounded-xl border"
+                        style={{ background: "#1B2A3C", borderColor: "#2E4A62" }}
+                      >
+                        <Lightbulb size={16} className="flex-shrink-0 mt-0.5" style={{ color: "#D88FA3" }} />
+                        <p className="text-xs leading-relaxed" style={{ color: "#A0B0C0" }}>
+                          {step.highlight
+                            ? (() => {
+                                const parts = step.tips.split(step.highlight);
+                                return <>{parts[0]}<strong className="font-bold" style={{ color: "#FFFFFF" }}>{step.highlight}</strong>{parts[1]}</>;
+                              })()
+                            : step.tips}
+                        </p>
                       </div>
                     )}
                   </div>
