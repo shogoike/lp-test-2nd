@@ -185,6 +185,53 @@ body {
 .dark-theme .ring-green-200 {
   --tw-ring-color: rgba(255, 255, 255, 0.15) !important;
 }
+/* ロードマップ タイミングバッジ */
+.dark-theme .bg-orange-50,
+.dark-theme .bg-pink-50:not(section),
+.dark-theme .bg-purple-50,
+.dark-theme .bg-blue-50,
+.dark-theme .bg-green-50 {
+  background: #2E4A62 !important;
+}
+.dark-theme .text-orange-600,
+.dark-theme .text-pink-600,
+.dark-theme .text-purple-600,
+.dark-theme .text-blue-600,
+.dark-theme .text-green-600 {
+  color: #D0D8E0 !important;
+}
+.dark-theme .border-orange-200,
+.dark-theme .border-pink-200,
+.dark-theme .border-purple-200,
+.dark-theme .border-blue-200,
+.dark-theme .border-green-200 {
+  border-color: #3A506A !important;
+}
+/* ロードマップ Tipsボックス */
+.dark-theme .bg-orange-50.border-orange-100,
+.dark-theme .bg-pink-50.border-pink-100,
+.dark-theme .bg-purple-50.border-purple-100,
+.dark-theme .bg-blue-50.border-blue-100,
+.dark-theme .bg-green-50.border-green-100 {
+  background: #1B2A3C !important;
+  border-color: #2E4A62 !important;
+}
+/* アイコン背景 */
+.dark-theme .bg-orange-100,
+.dark-theme .bg-pink-100,
+.dark-theme .bg-purple-100,
+.dark-theme .bg-blue-100,
+.dark-theme .bg-green-100 {
+  background: #2A3F55 !important;
+}
+/* タイムライン接続線 */
+.dark-theme .bg-gradient-to-b.from-orange-300,
+.dark-theme .bg-gradient-to-b.from-pink-300,
+.dark-theme .bg-gradient-to-b.from-purple-300,
+.dark-theme .bg-gradient-to-b.from-blue-300,
+.dark-theme .bg-green-300 {
+  background: #3A506A !important;
+}
 /* カード内テキストを読みやすく */
 .dark-theme .text-sm.leading-relaxed,
 .dark-theme .text-gray-600.text-sm {

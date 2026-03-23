@@ -8,7 +8,7 @@ import HeroWithModal from "@/app/components/HeroWithModal";
 import LineImageLink from "@/app/components/LineImageLink";
 import Roadmap from "@/app/components/Roadmap";
 
-export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta" | "roadmap";
+export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta" | "roadmap" | "qa";
 
 const sectionAltText: Record<string, string> = {
   hero_view: "保育士専門退職代行アスヤメ メインビジュアル",
@@ -101,6 +101,9 @@ export default function LPPage({
           }
           if (section === "roadmap") {
             return <Roadmap key={`roadmap-${idx}`} />;
+          }
+          if (section === "qa") {
+            return <QASection key={`qa-${idx}`} />;
           }
           if (section === "voices") {
             return (
