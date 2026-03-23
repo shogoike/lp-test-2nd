@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X, ChevronRight } from "lucide-react";
+import { handleLineClick } from "@/lib/lineConversion";
 
 export default function HeroWithModal({
   src,
@@ -43,9 +44,8 @@ export default function HeroWithModal({
             </p>
 
             <a
-              href="/line"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
+              onClick={handleLineClick}
               className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-black py-3 px-8 rounded-full shadow-lg transition-all duration-300 w-full"
             >
               <img

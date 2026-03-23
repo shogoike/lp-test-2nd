@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
+import { handleLineClick } from "@/lib/lineConversion";
 
 export default function PricingPage() {
   return (
@@ -44,9 +47,8 @@ export default function PricingPage() {
 
             {/* CTA */}
             <a
-              href="/line"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
+              onClick={handleLineClick}
               className="inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white font-black text-base md:text-lg py-3 px-8 rounded-full transition-colors shadow-md"
             >
               <img src="/pic/icon/line_logo.jpg" alt="LINE" className="w-6 h-6 rounded-md border border-white/50" />

@@ -5,6 +5,7 @@ import FloatingCtaButton from "@/app/components/FloatingCtaButton";
 import QASection from "@/app/components/QASection";
 import CustomerVoices from "@/app/components/CustomerVoices";
 import HeroWithModal from "@/app/components/HeroWithModal";
+import LineImageLink from "@/app/components/LineImageLink";
 
 export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
 
@@ -149,28 +150,22 @@ export default function LPPage({
               );
             }
             return (
-              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={`/pic/${section}/${imageFileName}`}
-                  alt={sectionAltText[section] || section}
-                  className="w-full h-auto block cursor-pointer"
-                  style={{ display: "block" }}
-                />
-              </a>
+              <LineImageLink
+                key={`${section}-${idx}`}
+                src={`/pic/${section}/${imageFileName}`}
+                alt={sectionAltText[section] || section}
+              />
             );
           }
 
           // priceFirstLayoutの先頭画像にはLINEリンクを付ける
           if (idx === 0 && layoutType === "price") {
             return (
-              <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={`/pic/${section}/${imageFileName}`}
-                  alt={sectionAltText[section] || section}
-                  className="w-full h-auto block cursor-pointer"
-                  style={{ display: "block" }}
-                />
-              </a>
+              <LineImageLink
+                key={`${section}-${idx}`}
+                src={`/pic/${section}/${imageFileName}`}
+                alt={sectionAltText[section] || section}
+              />
             );
           }
 
@@ -219,6 +214,7 @@ export default function LPPage({
             <Link href="/pricing" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">料金について</Link>
             <Link href="/tokushoho" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">特定商取引法に基づく表記</Link>
             <Link href="/privacy" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">プライバシーポリシー</Link>
+            <Link href="/guide" className="text-pink-600 hover:text-pink-500 hover:underline transition-colors font-medium">保育士のやめ方ガイド</Link>
           </div>
           <p className="text-center text-xs text-pink-300 mt-8">© 2025 by 8seAls All Rights Reserved.</p>
         </div>

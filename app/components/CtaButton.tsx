@@ -1,14 +1,14 @@
 "use client";
 
-import { MessageCircle, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { handleLineClick } from "@/lib/lineConversion";
 
 export default function CtaButton({ text = "今すぐLINE相談" }: { text?: string }) {
     return (
         <div className="w-full flex justify-center bg-pink-50/50 py-4 md:py-6 px-4">
             <a
-                href="/line"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={handleLineClick}
                 className="group flex flex-col items-center justify-center w-full max-w-[220px] md:max-w-[260px] cursor-pointer relative z-10 mx-auto"
                 data-cta="inline"
                 data-cta-text={text}

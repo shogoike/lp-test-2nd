@@ -1,14 +1,14 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
+import { handleLineClick } from "@/lib/lineConversion";
 
 export default function FloatingCtaButton({ text = "無料で話をする" }: { text?: string }) {
     return (
         <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center pb-3 px-4 pointer-events-none">
             <a
-                href="/line"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={handleLineClick}
                 className="pointer-events-auto flex items-center justify-center max-w-[200px] cursor-pointer"
                 data-cta="floating"
                 data-cta-text={text}
