@@ -4,6 +4,7 @@ import CtaButton from "@/app/components/CtaButton";
 import FloatingCtaButton from "@/app/components/FloatingCtaButton";
 import QASection from "@/app/components/QASection";
 import CustomerVoices from "@/app/components/CustomerVoices";
+import HeroWithModal from "@/app/components/HeroWithModal";
 
 export type SectionType = "hero_view" | "kyokan" | "voices" | "price" | "ansin" | "erabareruriyuu" | "cta";
 
@@ -27,6 +28,7 @@ const defaultLayout: SectionType[] = [
 ];
 
 const priceFirstLayout: SectionType[] = [
+  "hero_view",
   "price",
   "voices",
   "kyokan",
@@ -40,13 +42,16 @@ export default function LPPage({
   searchParams = {},
   ctaText,
   darkTheme = false,
+  excludeSections = [],
 }: {
   layoutType?: "default" | "price";
   searchParams?: { [key: string]: string | string[] | undefined };
   ctaText?: string;
   darkTheme?: boolean;
+  excludeSections?: SectionType[];
 }) {
-  const layoutConfig = layoutType === "price" ? priceFirstLayout : defaultLayout;
+  const baseLayout = layoutType === "price" ? priceFirstLayout : defaultLayout;
+  const layoutConfig = baseLayout.filter((s) => !excludeSections.includes(s));
 
   const getSafeImage = (category: keyof typeof images, index: number) => {
     const list = images[category];
@@ -134,6 +139,15 @@ export default function LPPage({
           if (!imageFileName) return null;
 
           if (section === "hero_view") {
+            if (layoutType === "price") {
+              return (
+                <HeroWithModal
+                  key={`${section}-${idx}`}
+                  src={`/pic/${section}/${imageFileName}`}
+                  alt={sectionAltText[section] || section}
+                />
+              );
+            }
             return (
               <a key={`${section}-${idx}`} href="/line" target="_blank" rel="noopener noreferrer">
                 <img

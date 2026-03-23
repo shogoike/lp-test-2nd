@@ -10,5 +10,5 @@ export default function Main2Page({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  return <LPPage layoutType="price" searchParams={{ ...searchParams, hero: "0", price: "1" }} darkTheme />;
+  return <LPPage layoutType="price" searchParams={{ ...searchParams, hero: "2", price: "1" }} darkTheme excludeSections={["price"]} />;
 }

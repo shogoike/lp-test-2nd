@@ -1,7 +1,8 @@
 export const images = {
   "hero_view": [
     "hero1.jpg",
-    "price_hero.jpg"
+    "price_hero.jpg",
+    "hero2_witoutline.jpg"
   ],
   "ansin": [],
   "erabareruriyuu": [
