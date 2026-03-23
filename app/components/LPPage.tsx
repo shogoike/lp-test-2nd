@@ -190,8 +190,8 @@ export default function LPPage({
           );
         })}
 
-        {/* よくある質問 (Q&A) */}
-        <QASection />
+        {/* よくある質問 (Q&A) - customLayout未使用時のみ */}
+        {!customLayout && <QASection />}
 
         {/* 最後のCTAボタン */}
         <CtaButton text={ctaText} />

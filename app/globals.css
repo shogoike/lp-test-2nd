@@ -164,7 +164,8 @@ body {
 }
 /* フローティングボタン */
 .dark-theme [data-cta="floating"] .bg-gray-900 {
-  background: #D88FA3 !important;
+  background: #243A50 !important;
+  border: 1px solid #3A506A !important;
 }
 /* マーキーテキスト */
 .dark-theme .shrink-0 {
