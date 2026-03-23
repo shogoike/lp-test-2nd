@@ -103,11 +103,11 @@ body {
 .dark-theme .shadow-lg {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !important;
 }
-/* CTAボタン - くすみピンク */
+/* CTAボタン - 濃紺 */
 .dark-theme [data-cta] > div,
 .dark-theme [data-cta] .bg-gray-900 {
-  background: #D88FA3 !important;
-  box-shadow: 0 4px 0 #B8738A !important;
+  background: #243A50 !important;
+  box-shadow: 0 4px 0 #1a2633 !important;
   padding: 0 !important;
 }
 .dark-theme [data-cta] .bg-gradient-to-b {
