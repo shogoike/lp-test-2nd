@@ -9,9 +9,7 @@ declare global {
 export function handleLineClick(e: React.MouseEvent) {
   e.preventDefault();
 
-  // クリック直後にウィンドウを開く（ポップアップブロック回避）
-  const newWindow = window.open("about:blank", "_blank");
-
+  // コンバージョン発火（非同期、結果を待たない）
   if (typeof window.gtag === "function") {
     window.gtag("event", "conversion", {
       send_to: "AW-17871482472/7dHSCKn8gIwcEOjc5MlC",
@@ -20,13 +18,8 @@ export function handleLineClick(e: React.MouseEvent) {
     });
   }
 
-  // コンバージョン発火後にURLをセット
-  if (newWindow) {
-    newWindow.location.href = LINE_URL;
-  } else {
-    // ブロックされた場合のフォールバック
-    window.location.href = LINE_URL;
-  }
+  // 現在のページからLINEに遷移（新しいタブは開かない）
+  window.location.href = LINE_URL;
 }
 
 export { LINE_URL };
