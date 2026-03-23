@@ -108,6 +108,10 @@ body {
 .dark-theme [data-cta] .bg-gray-900 {
   background: #D88FA3 !important;
   box-shadow: 0 4px 0 #B8738A !important;
+  padding: 0 !important;
+}
+.dark-theme [data-cta] .bg-gradient-to-b {
+  background: transparent !important;
 }
 .dark-theme [data-cta] span {
   color: #FFFFFF !important;
