@@ -9,28 +9,23 @@ declare global {
 export function handleLineClick(e: React.MouseEvent) {
   e.preventDefault();
 
+  // クリック直後にウィンドウを開く（ポップアップブロック回避）
+  const newWindow = window.open("about:blank", "_blank");
+
   if (typeof window.gtag === "function") {
-    let opened = false;
     window.gtag("event", "conversion", {
       send_to: "AW-17871482472/7dHSCKn8gIwcEOjc5MlC",
       value: 1.0,
       currency: "JPY",
-      event_callback: () => {
-        if (!opened) {
-          opened = true;
-          window.open(LINE_URL, "_blank");
-        }
-      },
     });
-    // コールバックが呼ばれない場合のフォールバック
-    setTimeout(() => {
-      if (!opened) {
-        opened = true;
-        window.open(LINE_URL, "_blank");
-      }
-    }, 2000);
+  }
+
+  // コンバージョン発火後にURLをセット
+  if (newWindow) {
+    newWindow.location.href = LINE_URL;
   } else {
-    window.open(LINE_URL, "_blank");
+    // ブロックされた場合のフォールバック
+    window.location.href = LINE_URL;
   }
 }
 
