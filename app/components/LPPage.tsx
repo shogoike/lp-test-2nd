@@ -160,10 +160,12 @@ export default function LPPage({
               );
             }
             return (
-              <LineImageLink
+              <img
                 key={`${section}-${idx}`}
                 src={`/pic/${section}/${imageFileName}`}
                 alt={sectionAltText[section] || section}
+                className="w-full h-auto block"
+                style={{ display: "block" }}
               />
             );
           }
